@@ -1,0 +1,11 @@
+{
+  "_fv": 6,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "0",
+    "keyBindingName": "Instant Force Ability",
+    "onKeyPressed": {
+      "name": "InstantAbilityKeybindOnKeyPressed"
+    }
+  }
+}

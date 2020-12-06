@@ -1,0 +1,24 @@
+{
+  "_fv": 6,
+  "_type": "potion",
+  "definition": {
+    "name": "Boosted Midichlorians",
+    "effectName": "Midichlorians",
+    "icon": "xp.png",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "registerPotionType": true,
+    "curativeItems": [
+      {
+        "value": "Items.MILK_BUCKET"
+      }
+    ],
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

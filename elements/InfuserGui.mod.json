@@ -1,0 +1,119 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 461,
+    "height": 395,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "triangle.png",
+          "name": "triangle.png",
+          "x": 314,
+          "y": 40
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "name": "Slot #0",
+          "x": 314,
+          "y": 200
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "name": "Slot #1",
+          "x": 496,
+          "y": 198
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 3,
+          "name": "Slot #3",
+          "x": 407,
+          "y": 56
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Infuse",
+          "onClick": {
+            "name": "InfuseClicked"
+          },
+          "width": 120,
+          "height": 40,
+          "name": "Infuse",
+          "x": 369,
+          "y": 393
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "name": "Slot #5",
+          "x": 210,
+          "y": 60
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "name": "Slot #6",
+          "x": 606,
+          "y": 60
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 7,
+          "name": "Slot #7",
+          "x": 210,
+          "y": 96
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 8,
+          "name": "Slot #8",
+          "x": 606,
+          "y": 96
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 4,
+          "name": "Slot #4",
+          "x": 405,
+          "y": 146
+        }
+      }
+    ]
+  }
+}

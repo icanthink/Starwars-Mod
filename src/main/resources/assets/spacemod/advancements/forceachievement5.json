@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "spacemod:textures/triangle.png",
+    "icon": {
+      "item": "spacemod:forcexp"
+    },
+    "title": {
+      "translate": "advancements.forceachievement5.title"
+    },
+    "description": {
+      "translate": "advancements.forceachievement5.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "forceachievement5": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 506,
+    "height": 382,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Go!",
+          "onClick": {
+            "name": "UseAbility"
+          },
+          "width": 60,
+          "height": 40,
+          "name": "Go!",
+          "x": 394,
+          "y": 120
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 0,
+          "name": "Slot #0",
+          "x": 192,
+          "y": 60
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "name": "Slot #1",
+          "x": 192,
+          "y": 96
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "name": "Slot #2",
+          "x": 228,
+          "y": 96
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 100,
+          "onSlotChanged": {
+            "name": "RefillForceGui"
+          },
+          "onTakenFromSlot": {
+            "name": "RefillForceGui"
+          },
+          "name": "Slot #100",
+          "x": 624,
+          "y": 60
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 101,
+          "onSlotChanged": {
+            "name": "RefillForceGui"
+          },
+          "onTakenFromSlot": {
+            "name": "RefillForceGui"
+          },
+          "name": "Slot #101",
+          "x": 624,
+          "y": 96
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 102,
+          "onSlotChanged": {
+            "name": "RefillForceGui"
+          },
+          "onTakenFromSlot": {
+            "name": "RefillForceGui"
+          },
+          "name": "Slot #102",
+          "x": 624,
+          "y": 132
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 103,
+          "name": "Slot #103",
+          "x": 624,
+          "y": 168
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 104,
+          "onSlotChanged": {
+            "name": "RefillForceGui"
+          },
+          "name": "Slot #104",
+          "x": 624,
+          "y": 204
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 105,
+          "onSlotChanged": {
+            "name": "RefillForceGui"
+          },
+          "name": "Slot #105",
+          "x": 624,
+          "y": 240
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 106,
+          "onSlotChanged": {
+            "name": "RefillForceGui"
+          },
+          "name": "Slot #106",
+          "x": 624,
+          "y": 276
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 107,
+          "onSlotChanged": {
+            "name": "RefillForceGui"
+          },
+          "name": "Slot #107",
+          "x": 624,
+          "y": 312
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 108,
+          "onSlotChanged": {
+            "name": "RefillForceGui"
+          },
+          "name": "Slot #108",
+          "x": 624,
+          "y": 384
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "name": "Slot #3",
+          "x": 192,
+          "y": 132
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "name": "Slot #4",
+          "x": 192,
+          "y": 168
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "name": "Slot #5",
+          "x": 192,
+          "y": 204
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "name": "Slot #6",
+          "x": 192,
+          "y": 276
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 109,
+          "name": "Slot #109",
+          "x": 588,
+          "y": 60
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 110,
+          "name": "Slot #110",
+          "x": 588,
+          "y": 96
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 111,
+          "name": "Slot #111",
+          "x": 588,
+          "y": 132
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 112,
+          "name": "Slot #112",
+          "x": 588,
+          "y": 168
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 113,
+          "name": "Slot #113",
+          "x": 588,
+          "y": 204
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 114,
+          "name": "Slot #114",
+          "x": 588,
+          "y": 240
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 115,
+          "name": "Slot #115",
+          "x": 588,
+          "y": 276
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 116,
+          "name": "Slot #116",
+          "x": 588,
+          "y": 312
+        }
+      }
+    ]
+  }
+}

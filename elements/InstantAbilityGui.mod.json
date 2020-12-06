@@ -1,0 +1,81 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 403,
+    "height": 189,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "width": 240,
+          "height": 40,
+          "name": "forceability1",
+          "x": 246,
+          "y": 168
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "width": 240,
+          "height": 40,
+          "name": "forceability2",
+          "x": 246,
+          "y": 222
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "width": 240,
+          "height": 40,
+          "name": "forceability3",
+          "x": 246,
+          "y": 276
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Save Slot 1",
+          "onClick": {
+            "name": "SaveSlot1Clicked"
+          },
+          "width": 120,
+          "height": 40,
+          "name": "Save Slot 1",
+          "x": 498,
+          "y": 168
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Save Slot 2",
+          "width": 120,
+          "height": 40,
+          "name": "Save Slot 2",
+          "x": 498,
+          "y": 222
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Save Slot 3",
+          "width": 120,
+          "height": 40,
+          "name": "Save Slot 3",
+          "x": 498,
+          "y": 276
+        }
+      }
+    ]
+  }
+}

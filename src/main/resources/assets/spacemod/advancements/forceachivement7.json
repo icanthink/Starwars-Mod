@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "spacemod:textures/triangle.png",
+    "icon": {
+      "item": "spacemod:forcexp"
+    },
+    "title": {
+      "translate": "advancements.forceachivement7.title"
+    },
+    "description": {
+      "translate": "advancements.forceachivement7.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "forceachivement7": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}

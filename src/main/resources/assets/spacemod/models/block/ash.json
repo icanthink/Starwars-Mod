@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "spacemod:blocks/ashstones",
+    "up": "spacemod:blocks/ashstones",
+    "north": "spacemod:blocks/ashstones",
+    "east": "spacemod:blocks/ashstones",
+    "south": "spacemod:blocks/ashstones",
+    "west": "spacemod:blocks/ashstones",
+    "particle": "spacemod:blocks/ashstones"
+  }
+}

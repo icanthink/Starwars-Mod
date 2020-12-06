@@ -1,0 +1,11 @@
+{
+  "_fv": 6,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "K",
+    "keyBindingName": "Save Slot 1 Keybind",
+    "onKeyPressed": {
+      "name": "SaveSlot2KeybindOnKeyPressed"
+    }
+  }
+}
