@@ -1,14 +1,20 @@
 package net.icanthink.spacemod.procedure;
 
+import net.minecraftforge.items.ItemHandlerHelper;
+
 import net.minecraft.world.WorldServer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import net.icanthink.spacemod.item.ItemPermanentMidichlorianInjection;
+import net.icanthink.spacemod.item.ItemEmptySyringe;
 import net.icanthink.spacemod.ElementsSpaceMod;
 
 import java.util.Iterator;
@@ -45,6 +51,14 @@ public class ProcedurePermanentMidichlorianInjectionRightClickedInAir extends El
 			}
 		} else {
 			entity.attackEntityFrom(DamageSource.MAGIC, (float) 20);
+		}
+		if (entity instanceof EntityPlayer)
+			((EntityPlayer) entity).inventory.clearMatchingItems(new ItemStack(ItemPermanentMidichlorianInjection.block, (int) (1)).getItem(), -1,
+					(int) 1, null);
+		if (entity instanceof EntityPlayer) {
+			ItemStack _setstack = new ItemStack(ItemEmptySyringe.block, (int) (1));
+			_setstack.setCount(1);
+			ItemHandlerHelper.giveItemToPlayer(((EntityPlayer) entity), _setstack);
 		}
 	}
 }
