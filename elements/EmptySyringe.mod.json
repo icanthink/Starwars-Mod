@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Empty Syringe",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:ForceTab"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -20,11 +20,8 @@
     "damageVsEntity": 0.0,
     "specialInfo": [],
     "hasGlow": false,
-    "onRightClickedInAir": {
-      "name": "EmptySyringeRightClickedInAir"
-    },
     "onRightClickedOnBlock": {
-      "name": "EmptySyringeRightClickedInAir"
+      "name": "EmptySyringeRightClickOnBlock"
     }
   }
 }

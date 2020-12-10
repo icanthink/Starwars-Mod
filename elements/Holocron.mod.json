@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Holocron",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:ForceTab"
     },
     "stackSize": 1,
     "enchantability": 0,

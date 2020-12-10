@@ -1,11 +1,13 @@
 package net.icanthink.spacemod.procedure;
 
 import net.minecraft.world.WorldServer;
+import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.init.MobEffects;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.Entity;
 
@@ -23,7 +25,12 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 			System.err.println("Failed to load dependency entity for procedure ActivateSaveSlot!");
 			return;
 		}
+		if (dependencies.get("world") == null) {
+			System.err.println("Failed to load dependency world for procedure ActivateSaveSlot!");
+			return;
+		}
 		Entity entity = (Entity) dependencies.get("entity");
+		World world = (World) dependencies.get("world");
 		String ForceString = "";
 		double indexCounter = 0;
 		double fullIndexCounter = 0;
@@ -189,6 +196,101 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 							}
 						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
 					}
+					if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("j"))) {
+						if (entity instanceof EntityLivingBase)
+							((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, (int) 20, (int) new Object() {
+								int convert(String s) {
+									try {
+										return Integer.parseInt(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))), (false), (false)));
+						forcePowerRequired = (double) (((forcePowerRequired) * 3) * new Object() {
+							int convert(String s) {
+								try {
+									return Integer.parseInt(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
+					}
+				}
+			}
+			if (((((ForceString).substring((int) (fullIndexCounter), (int) ((fullIndexCounter) + 1)))).equals("M"))) {
+				if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("e"))) {
+					if (!world.isRemote) {
+						world.createExplosion(null,
+								(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
+										entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
+												entity.getLook(1f).z * 100),
+										false, false, true).getBlockPos().getX()),
+								(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
+										entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
+												entity.getLook(1f).z * 100),
+										false, false, true).getBlockPos().getY()),
+								(int) (entity.world
+										.rayTraceBlocks(entity.getPositionEyes(1f),
+												entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
+														entity.getLook(1f).z * 100),
+												false, false, true)
+										.getBlockPos().getZ()),
+								(float) (new Object() {
+									int convert(String s) {
+										try {
+											return Integer.parseInt(s.trim());
+										} catch (Exception e) {
+										}
+										return 0;
+									}
+								}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))) * 4), true);
+					}
+					forcePowerRequired = (double) (((forcePowerRequired) * 1) * new Object() {
+						int convert(String s) {
+							try {
+								return Integer.parseInt(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
+						}
+					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
+				}
+				if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("l"))) {
+					for (int index1 = 0; index1 < (int) (new Object() {
+						int convert(String s) {
+							try {
+								return Integer.parseInt(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
+						}
+					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))); index1++) {
+						world.addWeatherEffect(new EntityLightningBolt(world,
+								(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
+										entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
+												entity.getLook(1f).z * 100),
+										false, false, true).getBlockPos().getX()),
+								(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
+										entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
+												entity.getLook(1f).z * 100),
+										false, false, true).getBlockPos().getY()),
+								(int) (entity.world
+										.rayTraceBlocks(entity.getPositionEyes(1f), entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100,
+												entity.getLook(1f).y * 100, entity.getLook(1f).z * 100), false, false, true)
+										.getBlockPos().getZ()),
+								false));
+					}
+					forcePowerRequired = (double) (((forcePowerRequired) * 1) * new Object() {
+						int convert(String s) {
+							try {
+								return Integer.parseInt(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
+						}
+					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
 				}
 			}
 			indexCounter = (double) ((indexCounter) + 1);

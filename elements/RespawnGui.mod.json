@@ -1,0 +1,53 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 386,
+    "height": 132,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Become Force Ghost",
+          "onClick": {
+            "name": "BecomeForceGhost"
+          },
+          "width": 360,
+          "height": 40,
+          "name": "Become Force Ghost",
+          "x": 248,
+          "y": 182
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Respawn",
+          "onClick": {
+            "name": "CloseGui"
+          },
+          "width": 140,
+          "height": 40,
+          "name": "Respawn",
+          "x": 359,
+          "y": 256
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "or",
+          "color": {
+            "value": -13421773,
+            "falpha": 0.0
+          },
+          "name": "or",
+          "x": 413,
+          "y": 224
+        }
+      }
+    ]
+  }
+}

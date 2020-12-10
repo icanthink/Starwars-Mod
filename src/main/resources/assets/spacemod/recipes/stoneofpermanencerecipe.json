@@ -1,0 +1,16 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "spacemod:stoneofinfinity"
+    },
+    {
+      "item": "spacemod:stoneoftime"
+    }
+  ],
+  "result": {
+    "item": "spacemod:stoneofpermanence",
+    "count": 1
+  }
+}

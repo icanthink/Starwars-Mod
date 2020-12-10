@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "spacemod:blocks/plantoflife",
+    "up": "spacemod:blocks/plantoflife",
+    "north": "spacemod:blocks/plantoflife",
+    "east": "spacemod:blocks/plantoflife",
+    "south": "spacemod:blocks/plantoflife",
+    "west": "spacemod:blocks/plantoflife",
+    "particle": "spacemod:blocks/plantoflife"
+  }
+}

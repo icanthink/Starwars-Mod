@@ -34,8 +34,11 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.block.Block;
 
+import net.icanthink.spacemod.gui.GuiRespawnGui;
 import net.icanthink.spacemod.gui.GuiInstantAbilityGui;
 import net.icanthink.spacemod.gui.GuiInfuserGui;
+import net.icanthink.spacemod.gui.GuiForceGhostGui;
+import net.icanthink.spacemod.gui.GuiForceEnchanterGui;
 import net.icanthink.spacemod.gui.GuiForceAbilitiesUpgrade;
 import net.icanthink.spacemod.gui.GuiForceAbilities;
 
@@ -135,6 +138,12 @@ public class ElementsSpaceMod implements IFuelHandler, IWorldGenerator {
 				return new GuiInfuserGui.GuiContainerMod(world, x, y, z, player);
 			if (id == GuiInstantAbilityGui.GUIID)
 				return new GuiInstantAbilityGui.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiRespawnGui.GUIID)
+				return new GuiRespawnGui.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiForceGhostGui.GUIID)
+				return new GuiForceGhostGui.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiForceEnchanterGui.GUIID)
+				return new GuiForceEnchanterGui.GuiContainerMod(world, x, y, z, player);
 			return null;
 		}
 
@@ -148,6 +157,12 @@ public class ElementsSpaceMod implements IFuelHandler, IWorldGenerator {
 				return new GuiInfuserGui.GuiWindow(world, x, y, z, player);
 			if (id == GuiInstantAbilityGui.GUIID)
 				return new GuiInstantAbilityGui.GuiWindow(world, x, y, z, player);
+			if (id == GuiRespawnGui.GUIID)
+				return new GuiRespawnGui.GuiWindow(world, x, y, z, player);
+			if (id == GuiForceGhostGui.GUIID)
+				return new GuiForceGhostGui.GuiWindow(world, x, y, z, player);
+			if (id == GuiForceEnchanterGui.GUIID)
+				return new GuiForceEnchanterGui.GuiWindow(world, x, y, z, player);
 			return null;
 		}
 	}

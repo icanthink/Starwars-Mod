@@ -1,0 +1,45 @@
+{
+  "_fv": 6,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:GoldPlate"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:GoldPlate"
+      },
+      {
+        "value": "CUSTOM:DiamondPlate"
+      },
+      {
+        "value": "CUSTOM:GoldPlate"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:GoldPlate"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:EmptyForceXpCasing"
+    },
+    "name": "emptyforcexpcasingrecipe2",
+    "namespace": "mod"
+  }
+}

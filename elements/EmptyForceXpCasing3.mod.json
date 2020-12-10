@@ -1,0 +1,45 @@
+{
+  "_fv": 6,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.WITHER_SKELETON_WALL_SKULL"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.WITHER_SKELETON_WALL_SKULL"
+      },
+      {
+        "value": "Items.NETHER_STAR"
+      },
+      {
+        "value": "Blocks.WITHER_SKELETON_WALL_SKULL"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.WITHER_SKELETON_WALL_SKULL"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:EmptyForceXpCasing"
+    },
+    "name": "emptyforcexpcasing3",
+    "namespace": "mod"
+  }
+}

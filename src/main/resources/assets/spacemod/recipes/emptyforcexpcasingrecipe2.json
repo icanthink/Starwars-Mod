@@ -1,0 +1,30 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "spacemod:goldplate"
+    },
+    "3": {
+      "item": "spacemod:goldplate"
+    },
+    "4": {
+      "item": "spacemod:diamondplate"
+    },
+    "5": {
+      "item": "spacemod:goldplate"
+    },
+    "7": {
+      "item": "spacemod:goldplate"
+    }
+  },
+  "result": {
+    "item": "spacemod:emptyforcexpcasing",
+    "count": 1
+  }
+}

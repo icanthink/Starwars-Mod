@@ -1,0 +1,40 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 370,
+    "height": 332,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "text": "Become Force Projection",
+          "onClick": {
+            "name": "ForceProjection"
+          },
+          "width": 360,
+          "height": 40,
+          "name": "Become Force Projection",
+          "x": 246,
+          "y": 78
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Resist The Force",
+          "onClick": {
+            "name": "ResistTheForce"
+          },
+          "width": 360,
+          "height": 40,
+          "name": "Resist The Force",
+          "x": 246,
+          "y": 114
+        }
+      }
+    ]
+  }
+}

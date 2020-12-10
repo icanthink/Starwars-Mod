@@ -3,6 +3,7 @@ package net.icanthink.spacemod.procedure;
 import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.WorldServer;
+import net.minecraft.world.World;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.potion.PotionEffect;
@@ -25,6 +26,7 @@ import net.icanthink.spacemod.item.ItemPositiveModifier;
 import net.icanthink.spacemod.item.ItemPlayerTarget;
 import net.icanthink.spacemod.item.ItemNegativeModifier;
 import net.icanthink.spacemod.item.ItemFireModifier;
+import net.icanthink.spacemod.SpaceModVariables;
 import net.icanthink.spacemod.ElementsSpaceMod;
 
 import java.util.function.Supplier;
@@ -42,7 +44,12 @@ public class ProcedureUseAbility extends ElementsSpaceMod.ModElement {
 			System.err.println("Failed to load dependency entity for procedure UseAbility!");
 			return;
 		}
+		if (dependencies.get("world") == null) {
+			System.err.println("Failed to load dependency world for procedure UseAbility!");
+			return;
+		}
 		Entity entity = (Entity) dependencies.get("entity");
+		World world = (World) dependencies.get("world");
 		double loopIndex = 0;
 		double power = 0;
 		double effectTIme = 0;
@@ -445,6 +452,7 @@ public class ProcedureUseAbility extends ElementsSpaceMod.ModElement {
 				}
 			}
 		}
+		forceLevelRequired = (double) (((SpaceModVariables.MapVariables.get(world).ForceStrength) / 20) + (forceLevelRequired));
 		if (((forceLevelRequired) > (forceLevel))) {
 			entity.attackEntityFrom(DamageSource.MAGIC, (float) (((forceLevelRequired) - (forceLevel)) * 10));
 		}

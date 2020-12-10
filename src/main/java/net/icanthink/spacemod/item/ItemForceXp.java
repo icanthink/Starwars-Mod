@@ -16,11 +16,11 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.block.state.IBlockState;
 
 import net.icanthink.spacemod.procedure.ProcedureForceXpRightClick;
+import net.icanthink.spacemod.creativetab.TabForceTab;
 import net.icanthink.spacemod.ElementsSpaceMod;
 
 @ElementsSpaceMod.ModElement.Tag
@@ -47,7 +47,7 @@ public class ItemForceXp extends ElementsSpaceMod.ModElement {
 			maxStackSize = 1;
 			setUnlocalizedName("forcexp");
 			setRegistryName("forcexp");
-			setCreativeTab(CreativeTabs.MISC);
+			setCreativeTab(TabForceTab.tab);
 		}
 
 		@Override

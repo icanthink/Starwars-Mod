@@ -1,5 +1,6 @@
 package net.icanthink.spacemod.procedure;
 
+import net.minecraft.world.World;
 import net.minecraft.entity.Entity;
 
 import net.icanthink.spacemod.SpaceModVariables;
@@ -16,11 +17,17 @@ public class ProcedureSaveSlot2KeybindOnKeyPressed extends ElementsSpaceMod.ModE
 			System.err.println("Failed to load dependency entity for procedure SaveSlot2KeybindOnKeyPressed!");
 			return;
 		}
+		if (dependencies.get("world") == null) {
+			System.err.println("Failed to load dependency world for procedure SaveSlot2KeybindOnKeyPressed!");
+			return;
+		}
 		Entity entity = (Entity) dependencies.get("entity");
+		World world = (World) dependencies.get("world");
 		SpaceModVariables.ForceAbilitySelected = (double) 1;
 		{
 			java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 			$_dependencies.put("entity", entity);
+			$_dependencies.put("world", world);
 			ProcedureActivateSaveSlot.executeProcedure($_dependencies);
 		}
 	}

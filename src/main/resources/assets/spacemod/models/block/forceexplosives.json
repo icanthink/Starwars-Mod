@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "spacemod:blocks/forceexplosivebottom",
+    "up": "spacemod:blocks/forceexplosivetop",
+    "north": "spacemod:blocks/forceexplosiveside",
+    "east": "spacemod:blocks/forceexplosiveside",
+    "south": "spacemod:blocks/forceexplosiveside",
+    "west": "spacemod:blocks/forceexplosiveside",
+    "particle": "spacemod:blocks/forceexplosivebottom"
+  }
+}

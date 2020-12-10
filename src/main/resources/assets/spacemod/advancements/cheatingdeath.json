@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "spacemod:textures/triangle.png",
+    "icon": {
+      "item": "spacemod:forcexp"
+    },
+    "title": {
+      "translate": "advancements.cheatingdeath.title"
+    },
+    "description": {
+      "translate": "advancements.cheatingdeath.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cheatingdeath": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}

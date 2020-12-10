@@ -16,8 +16,10 @@ public class SpaceModVariables {
 	public static String ForceSlot2 = "";
 	public static String ForceSlot3 = "";
 	public static double ForceAbilitySelected = 0;
+	public static double ForceConnectionInDeath = 4;
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "spacemod_mapvars";
+		public double ForceStrength = 0;
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -28,10 +30,12 @@ public class SpaceModVariables {
 
 		@Override
 		public void readFromNBT(NBTTagCompound nbt) {
+			ForceStrength = nbt.getDouble("ForceStrength");
 		}
 
 		@Override
 		public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
+			nbt.setDouble("ForceStrength", ForceStrength);
 			return nbt;
 		}
 

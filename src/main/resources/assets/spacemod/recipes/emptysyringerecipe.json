@@ -1,0 +1,24 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 4 ",
+    "6  "
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:stick"
+    },
+    "4": {
+      "item": "minecraft:glass"
+    },
+    "6": {
+      "item": "minecraft:stone_button"
+    }
+  },
+  "result": {
+    "item": "spacemod:emptysyringe",
+    "count": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "type": "forge:ore_dict",
+      "ore": "plateGold"
+    },
+    "3": {
+      "type": "forge:ore_dict",
+      "ore": "plateGold"
+    },
+    "4": {
+      "type": "forge:ore_dict",
+      "ore": "plateDiamond"
+    },
+    "5": {
+      "type": "forge:ore_dict",
+      "ore": "plateGold"
+    },
+    "7": {
+      "type": "forge:ore_dict",
+      "ore": "plateGold"
+    }
+  },
+  "result": {
+    "item": "spacemod:emptyforcexpcasing",
+    "count": 1
+  }
+}

@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Permanent Midichlorian Injection",
     "creativeTab": {
-      "value": "BREWING"
+      "value": "CUSTOM:ForceTab"
     },
     "stackSize": 1,
     "enchantability": 0,

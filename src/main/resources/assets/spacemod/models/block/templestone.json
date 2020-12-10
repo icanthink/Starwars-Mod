@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "spacemod:blocks/templestone",
+    "up": "spacemod:blocks/templestone",
+    "north": "spacemod:blocks/templestone",
+    "east": "spacemod:blocks/templestone",
+    "south": "spacemod:blocks/templestone",
+    "west": "spacemod:blocks/templestone",
+    "particle": "spacemod:blocks/templestone"
+  }
+}

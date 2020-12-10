@@ -1,0 +1,22 @@
+{
+  "_fv": 6,
+  "_type": "fluid",
+  "definition": {
+    "name": "LiquidMidichlorians",
+    "textureStill": "liquidmidichlorians",
+    "textureFlowing": "liquidmidichlorians",
+    "luminosity": 2,
+    "density": 1000,
+    "viscosity": 1000,
+    "isGas": true,
+    "type": "WATER",
+    "generateBucket": true,
+    "creativeTab": {
+      "value": "CUSTOM:ForceTab"
+    },
+    "spawnWorldTypes": [],
+    "onEntityCollides": {
+      "name": "LiquidMidichloriansMobplayerCollidesBlock"
+    }
+  }
+}

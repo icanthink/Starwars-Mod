@@ -87,6 +87,7 @@ public class KeyBindingSaveSlot3Keybind extends ElementsSpaceMod.ModElement {
 		{
 			java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 			$_dependencies.put("entity", entity);
+			$_dependencies.put("world", world);
 			ProcedureSaveSlot3KeybindOnKeyPressed.executeProcedure($_dependencies);
 		}
 	}

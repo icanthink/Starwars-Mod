@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Force XP",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:ForceTab"
     },
     "stackSize": 1,
     "enchantability": 0,

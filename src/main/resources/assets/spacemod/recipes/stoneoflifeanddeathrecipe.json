@@ -1,0 +1,43 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "spacemod:forceinfusediron"
+    },
+    "1": {
+      "item": "spacemod:stoneoflife"
+    },
+    "2": {
+      "item": "spacemod:forceinfusediron"
+    },
+    "3": {
+      "item": "spacemod:forceinfusediron"
+    },
+    "4": {
+      "item": "minecraft:skull",
+      "data": 1
+    },
+    "5": {
+      "item": "spacemod:forceinfusediron"
+    },
+    "6": {
+      "item": "spacemod:forceinfusediron"
+    },
+    "7": {
+      "item": "spacemod:stoneofdeath"
+    },
+    "8": {
+      "item": "spacemod:forceinfusediron"
+    }
+  },
+  "result": {
+    "item": "spacemod:stoneofdeathandlife",
+    "count": 1
+  }
+}

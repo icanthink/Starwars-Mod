@@ -1,7 +1,8 @@
 {
   "id_map": {
     "DIMENSION": 3,
-    "GUI": 6
+    "GUI": 9,
+    "ENTITY": 2
   },
   "mod_elements": [
     {
@@ -178,6 +179,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -449,14 +454,6 @@
       }
     },
     {
-      "name": "Ash",
-      "type": "block",
-      "sortid": 38,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "InfuserGui",
       "type": "gui",
       "sortid": 40,
@@ -557,22 +554,6 @@
       "ids": {}
     },
     {
-      "name": "EmptySyringeRightClickedInAir",
-      "type": "procedure",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "InstantAbilityKeybind",
       "type": "keybind",
       "sortid": 48,
@@ -624,6 +605,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -640,6 +625,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -656,6 +645,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -672,6 +665,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -723,6 +720,672 @@
           }
         ]
       }
+    },
+    {
+      "name": "ForceExplosivesUpdateTick",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ForceExplosives",
+      "type": "block",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CheatingDeath",
+      "type": "achievement",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RespawnGui",
+      "type": "gui",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 7
+      }
+    },
+    {
+      "name": "CloseGui",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BecomeForceGhost",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerRespawn",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestItemRightClickedInAir",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TestItem",
+      "type": "item",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ForceGhostGui",
+      "type": "gui",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 8
+      }
+    },
+    {
+      "name": "ForceProjection",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ResistTheForce",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TempleStone",
+      "type": "block",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "UnstableTempleStonePlayerStartsToDestroy",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UnstableTempleStone",
+      "type": "block",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ForceEnchanter",
+      "type": "block",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ForceEnchanterGui",
+      "type": "gui",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 9
+      }
+    },
+    {
+      "name": "EmptyForceXpCasingRightClickedInAir",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EmptyForceXpCasing",
+      "type": "item",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DiamondPlate",
+      "type": "item",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GoldPlate",
+      "type": "item",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "EmptyForceXpCasingRecipe",
+      "type": "recipe",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "EmptyForceXpCasingRecipe2",
+      "type": "recipe",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DiamondPlateRecipe",
+      "type": "recipe",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GoldPlateRecipe",
+      "type": "recipe",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "WhyOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Why",
+      "type": "block",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "EmptyForceXpCasing3",
+      "type": "recipe",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "WhyCraftingRecipe",
+      "type": "recipe",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ForceTab",
+      "type": "tab",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LiquidMidichloriansMobplayerCollidesBlock",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LiquidMidichlorians",
+      "type": "fluid",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BlankForceStone",
+      "type": "item",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BlankForceStoneRecipe",
+      "type": "recipe",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BlankForceStoneRightClickedInAir",
+      "type": "procedure",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StoneOfInfinity",
+      "type": "item",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoneOfTime",
+      "type": "item",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoneOfPermanence",
+      "type": "item",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoneOfPermanenceRecipe",
+      "type": "recipe",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MidichlorianinjectionInjection",
+      "type": "item",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "EmptySyringeRightClickOnBlock",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PermanentMidichlorianInjectionRecipe",
+      "type": "recipe",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LifeBlockBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LifeBlock",
+      "type": "block",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "EmptySyringeRecipe",
+      "type": "recipe",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CompressedPlantBlock",
+      "type": "block",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "CompressedPlantBlockRecipe",
+      "type": "recipe",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ForceInfusedIron",
+      "type": "item",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RightClickOnAir",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StoneOfLife",
+      "type": "item",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoneOfDeath",
+      "type": "item",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoneOfLifeAndDeathEntityWalksOnTheBlock",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StoneOfDeathAndLife",
+      "type": "block",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoneOfLifeAndDeathRecipe",
+      "type": "recipe",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [
@@ -749,49 +1412,84 @@
       "type": "number",
       "scope": "global",
       "value": "0"
+    },
+    {
+      "name": "ForceStrength",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "ForceConnectionInDeath",
+      "type": "number",
+      "scope": "global",
+      "value": "4"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "advancements.forceachivement3.descr": "“For my ally is the Force, and a powerful ally it is.” – Yoda",
+      "item.timemodifier.name": "Time Modifier",
+      "item.forceinfusediron.name": "Force Infused Iron",
+      "itemGroup.tabforcetab": "Force Tab",
+      "fluid.liquidmidichlorians": "LiquidMidichlorians",
+      "item.midichlorianinjectioninjection.name": "Midichlorianinjection Injection",
+      "item.negativemodifier.name": "Negative Modifier",
+      "advancements.forceachivement7.descr": "“Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well, you should not. For my ally is the Force, and a powerful ally it is\" -Yoda",
+      "item.stoneofpermanence.name": "Stone Of Permanence",
+      "effect.midichlorians": "Midichlorians",
+      "tile.unstabletemplestone.name": "Temple Stone",
+      "tile.forceexplosives.name": "Force Explosives",
+      "advancements.forceachivement7.title": "Insensitive to the Physical World",
+      "tile.stoneofdeathandlife.name": "Stone Of Life And Death",
+      "tile.templestone.name": "Temple Stone",
+      "item.diamondplate.name": "Diamond Plate",
+      "advancements.forceachivement9.title": "A Pathways to Unnatural Abilities",
+      "advancements.forceachievement5.title": "Force Warrior",
+      "advancements.cheatingdeath.title": "Cheating Death",
+      "advancements.forceachivement4.descr": "\"I\u0027m one with the Force. The Force is with me.\" -Chirrut Îmwe",
+      "splash_potion.effect.midichlorians": "Splash Boosted Midichlorians",
+      "advancements.forceachivement3.title": "Force Adept",
+      "advancements.forceachivement6.title": "Connected to the Force",
       "key.mcreator.saveslot2keybind": "Save Slot 1 Keybind",
       "item.playertarget.name": "Player Target",
       "key.mcreator.saveslot3keybind": "Save Slot 1 Keybind",
-      "advancements.forceachivement3.descr": "“For my ally is the Force, and a powerful ally it is.” – Yoda",
+      "item.stoneofinfinity.name": "Stone Of Infinity",
       "key.mcreator.saveslot1keybind": "Save Slot 1 Keybind",
-      "item.timemodifier.name": "Time Modifier",
       "advancements.forceachivement8.title": "The Strongest Jedi",
+      "item.emptyforcexpcasing.name": "Empty Force Xp Casing",
       "item.emptysyringe.name": "Empty Syringe",
       "potion.effect.midichlorians": "Boosted Midichlorians",
       "item.firemodifier.name": "Fire Modifier",
       "advancements.forceachivement8.descr": "“My Mentor Taught Me Everything About The Force... Even The Nature Of The Dark Side.” -Darth Sidious",
       "lingering_potion.effect.midichlorians": "Lingering Boosted Midichlorians",
-      "item.negativemodifier.name": "Negative Modifier",
-      "advancements.forceachivement7.descr": "“Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well, you should not. For my ally is the Force, and a powerful ally it is\" -Yoda",
+      "item.blankforcestone.name": "Blank Force Stone",
       "advancements.forceachievement1.descr": "“Close your eyes. Feel it. The light…it’s always been there. It will guide you.” – Maz Kanata",
       "advancements.forceachivement4.title": "One With the Force",
-      "effect.midichlorians": "Midichlorians",
+      "tile.why.name": "Why...",
       "advancements.forceachivement2.descr": "“Don’t underestimate the Force.” – Darth Vader",
+      "item.stoneoflife.name": "Stone Of Life",
       "tipped_arrow.effect.midichlorians": "Arrow of Boosted Midichlorians",
       "key.mcreator.instantabilitykeybind": "Instant Force Ability",
-      "advancements.forceachivement7.title": "Insensitive to the Physical World",
+      "item.testitem.name": "Test Item",
+      "item.stoneofdeath.name": "Stone Of Death",
+      "item.stoneoftime.name": "Stone Of Time",
       "item.positivemodifier.name": "Positive Modifier",
-      "advancements.forceachivement2.title": "Force User",
       "advancements.forceachievement5.descr": "“Now I know there is something strong than fear — far stronger. The Force.” – Kanan Jarrus",
+      "advancements.forceachivement2.title": "Force User",
       "item.permanentmidichlorianinjection.name": "Permanent Midichlorian Injection",
-      "key.mcreator.useforceabilities": "Use Force Abilities",
       "advancements.forceachievement1.title": "Force Sensitive",
-      "advancements.forceachivement9.title": "A Pathways to Unnatural Abilities",
+      "key.mcreator.useforceabilities": "Use Force Abilities",
+      "item.goldplate.name": "Gold Plate",
       "advancements.forceachivement9.descr": "\"The dark side of the Force is a pathway to many abilities some consider to be unnatural.\" -Darth Sidious",
-      "tile.ash.name": "Ash Stone",
-      "advancements.forceachievement5.title": "Force Warrior",
-      "advancements.forceachivement4.descr": "\"I\u0027m one with the Force. The Force is with me.\" -Chirrut Îmwe",
+      "advancements.cheatingdeath.descr": "\"strike me down, I shall become more powerful than you can possibly imagine.\" -Obi-Wan Kenobi",
+      "tile.lifeblock.name": "Life Block",
       "item.holocron.name": "Holocron",
       "item.powermodifier.name": "Power Modifier",
-      "splash_potion.effect.midichlorians": "Splash Boosted Midichlorians",
+      "tile.forceenchanter.name": "Force Enchanter",
+      "tile.compressedplantblock.name": "Compressed Plant Block",
       "item.forcexp.name": "Force XP",
-      "advancements.forceachivement3.title": "Force Adept",
-      "advancements.forceachivement6.title": "Connected to the Force",
       "item.visionmodifier.name": "Vision Modifier",
       "advancements.forceachivement6.descr": "“You Must Feel The Force Around You; Here, Between You, Me, The Tree, The Rock, Everywhere, Yes.” -Yoda"
     }

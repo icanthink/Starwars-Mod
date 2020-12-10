@@ -12,15 +12,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.ActionResult;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.block.state.IBlockState;
 
-import net.icanthink.spacemod.procedure.ProcedureEmptySyringeRightClickedInAir;
+import net.icanthink.spacemod.procedure.ProcedureEmptySyringeRightClickOnBlock;
+import net.icanthink.spacemod.creativetab.TabForceTab;
 import net.icanthink.spacemod.ElementsSpaceMod;
 
 @ElementsSpaceMod.ModElement.Tag
@@ -47,7 +46,7 @@ public class ItemEmptySyringe extends ElementsSpaceMod.ModElement {
 			maxStackSize = 1;
 			setUnlocalizedName("emptysyringe");
 			setRegistryName("emptysyringe");
-			setCreativeTab(CreativeTabs.MISC);
+			setCreativeTab(TabForceTab.tab);
 		}
 
 		@Override
@@ -66,21 +65,6 @@ public class ItemEmptySyringe extends ElementsSpaceMod.ModElement {
 		}
 
 		@Override
-		public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
-			ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
-			ItemStack itemstack = ar.getResult();
-			int x = (int) entity.posX;
-			int y = (int) entity.posY;
-			int z = (int) entity.posZ;
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				ProcedureEmptySyringeRightClickedInAir.executeProcedure($_dependencies);
-			}
-			return ar;
-		}
-
-		@Override
 		public EnumActionResult onItemUseFirst(EntityPlayer entity, World world, BlockPos pos, EnumFacing direction, float hitX, float hitY,
 				float hitZ, EnumHand hand) {
 			EnumActionResult retval = super.onItemUseFirst(entity, world, pos, direction, hitX, hitY, hitZ, hand);
@@ -91,7 +75,11 @@ public class ItemEmptySyringe extends ElementsSpaceMod.ModElement {
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 				$_dependencies.put("entity", entity);
-				ProcedureEmptySyringeRightClickedInAir.executeProcedure($_dependencies);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureEmptySyringeRightClickOnBlock.executeProcedure($_dependencies);
 			}
 			return retval;
 		}

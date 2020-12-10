@@ -1,0 +1,16 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "spacemod:midichlorianinjectioninjection"
+    },
+    {
+      "item": "spacemod:stoneofpermanence"
+    }
+  ],
+  "result": {
+    "item": "spacemod:permanentmidichlorianinjection",
+    "count": 1
+  }
+}
