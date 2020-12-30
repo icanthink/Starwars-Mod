@@ -8,19 +8,14 @@
     "renderBgLayer": true,
     "components": [
       {
-        "type": "inputslot",
+        "type": "button",
         "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "color": {
-            "value": -2448096,
-            "falpha": 0.0
-          },
-          "id": 0,
-          "name": "Slot #0",
-          "x": 228,
-          "y": 60
+          "text": "Go!",
+          "width": 60,
+          "height": 40,
+          "name": "Go!",
+          "x": 480,
+          "y": 114
         }
       },
       {
@@ -29,14 +24,31 @@
           "inputLimit": {
             "value": ""
           },
-          "color": {
-            "value": -16711936,
-            "falpha": 0.0
+          "id": 0,
+          "name": "Slot #0",
+          "x": 570,
+          "y": 60
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "rsz_arrow.png",
+          "name": "rsz_arrow.png",
+          "x": 570,
+          "y": 96
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
           },
           "id": 1,
           "name": "Slot #1",
-          "x": 264,
-          "y": 60
+          "x": 552,
+          "y": 168
         }
       },
       {
@@ -47,91 +59,19 @@
           },
           "id": 2,
           "name": "Slot #2",
-          "x": 318,
-          "y": 60
+          "x": 588,
+          "y": 168
         }
       },
       {
-        "type": "inputslot",
+        "type": "textfield",
         "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 3,
-          "name": "Slot #3",
-          "x": 354,
-          "y": 60
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 4,
-          "name": "Slot #4",
-          "x": 390,
-          "y": 60
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 5,
-          "name": "Slot #5",
-          "x": 426,
-          "y": 60
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 6,
-          "name": "Slot #6",
-          "x": 462,
-          "y": 60
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 7,
-          "name": "Slot #7",
-          "x": 498,
-          "y": 60
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 8,
-          "name": "Slot #8",
-          "x": 534,
-          "y": 60
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "Go!",
-          "width": 60,
+          "placeholder": "",
+          "width": 240,
           "height": 40,
-          "name": "Go!",
-          "x": 573,
-          "y": 57
+          "name": "enchantId",
+          "x": 228,
+          "y": 114
         }
       }
     ]

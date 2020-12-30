@@ -320,6 +320,20 @@
           "x": 588,
           "y": 312
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Copy Last",
+          "onClick": {
+            "name": "DuplicateLastButtonPressed"
+          },
+          "width": 140,
+          "height": 40,
+          "name": "Copy Last",
+          "x": 358,
+          "y": 162
+        }
       }
     ]
   }

@@ -22,6 +22,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.gui.GuiButton;
 
 import net.icanthink.spacemod.SpaceMod;
@@ -58,27 +59,15 @@ public class GuiForceEnchanterGui extends ElementsSpaceMod.ModElement {
 			this.x = x;
 			this.y = y;
 			this.z = z;
-			this.internal = new InventoryBasic("", true, 9);
+			this.internal = new InventoryBasic("", true, 3);
 			TileEntity ent = world.getTileEntity(new BlockPos(x, y, z));
 			if (ent instanceof IInventory)
 				this.internal = (IInventory) ent;
-			this.customSlots.put(0, this.addSlotToContainer(new Slot(internal, 0, 7, 8) {
+			this.customSlots.put(0, this.addSlotToContainer(new Slot(internal, 0, 178, 8) {
 			}));
-			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 25, 8) {
+			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 169, 62) {
 			}));
-			this.customSlots.put(2, this.addSlotToContainer(new Slot(internal, 2, 52, 8) {
-			}));
-			this.customSlots.put(3, this.addSlotToContainer(new Slot(internal, 3, 70, 8) {
-			}));
-			this.customSlots.put(4, this.addSlotToContainer(new Slot(internal, 4, 88, 8) {
-			}));
-			this.customSlots.put(5, this.addSlotToContainer(new Slot(internal, 5, 106, 8) {
-			}));
-			this.customSlots.put(6, this.addSlotToContainer(new Slot(internal, 6, 124, 8) {
-			}));
-			this.customSlots.put(7, this.addSlotToContainer(new Slot(internal, 7, 142, 8) {
-			}));
-			this.customSlots.put(8, this.addSlotToContainer(new Slot(internal, 8, 160, 8) {
+			this.customSlots.put(2, this.addSlotToContainer(new Slot(internal, 2, 187, 62) {
 			}));
 			int si;
 			int sj;
@@ -105,18 +94,18 @@ public class GuiForceEnchanterGui extends ElementsSpaceMod.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 9) {
-					if (!this.mergeItemStack(itemstack1, 9, this.inventorySlots.size(), true)) {
+				if (index < 3) {
+					if (!this.mergeItemStack(itemstack1, 3, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 9, false)) {
-					if (index < 9 + 27) {
-						if (!this.mergeItemStack(itemstack1, 9 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 3, false)) {
+					if (index < 3 + 27) {
+						if (!this.mergeItemStack(itemstack1, 3 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 9, 9 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 3, 3 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}
@@ -238,6 +227,7 @@ public class GuiForceEnchanterGui extends ElementsSpaceMod.ModElement {
 		private World world;
 		private int x, y, z;
 		private EntityPlayer entity;
+		GuiTextField enchantId;
 		public GuiWindow(World world, int x, int y, int z, EntityPlayer entity) {
 			super(new GuiContainerMod(world, x, y, z, entity));
 			this.world = world;
@@ -264,25 +254,33 @@ public class GuiForceEnchanterGui extends ElementsSpaceMod.ModElement {
 			int l = (this.height - this.ySize) / 2;
 			this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
 			zLevel = 100.0F;
+			this.mc.renderEngine.bindTexture(new ResourceLocation("spacemod:textures/rsz_arrow.png"));
+			this.drawTexturedModalRect(this.guiLeft + 177, this.guiTop + 25, 0, 0, 256, 256);
 		}
 
 		@Override
 		public void updateScreen() {
 			super.updateScreen();
+			enchantId.updateCursorCounter();
 		}
 
 		@Override
 		protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
+			enchantId.mouseClicked(mouseX - guiLeft, mouseY - guiTop, mouseButton);
 			super.mouseClicked(mouseX, mouseY, mouseButton);
 		}
 
 		@Override
 		protected void keyTyped(char typedChar, int keyCode) throws IOException {
+			enchantId.textboxKeyTyped(typedChar, keyCode);
+			if (enchantId.isFocused())
+				return;
 			super.keyTyped(typedChar, keyCode);
 		}
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int par1, int par2) {
+			enchantId.drawTextBox();
 		}
 
 		@Override
@@ -298,7 +296,11 @@ public class GuiForceEnchanterGui extends ElementsSpaceMod.ModElement {
 			this.guiTop = (this.height - 194) / 2;
 			Keyboard.enableRepeatEvents(true);
 			this.buttonList.clear();
-			this.buttonList.add(new GuiButton(0, this.guiLeft + 178, this.guiTop + 6, 30, 20, "Go!"));
+			this.buttonList.add(new GuiButton(0, this.guiLeft + 132, this.guiTop + 34, 30, 20, "Go!"));
+			enchantId = new GuiTextField(0, this.fontRenderer, 6, 34, 120, 20);
+			guistate.put("text:enchantId", enchantId);
+			enchantId.setMaxStringLength(32767);
+			enchantId.setText("");
 		}
 
 		@Override

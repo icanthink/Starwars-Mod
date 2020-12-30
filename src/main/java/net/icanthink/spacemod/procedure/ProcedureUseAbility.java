@@ -147,6 +147,9 @@ public class ProcedureUseAbility extends ElementsSpaceMod.ModElement {
 		}.check())) {
 			slots = (double) 15;
 		}
+		if (((entity.dimension) == 6)) {
+			forceLevel = (double) 100;
+		}
 		for (int index0 = 0; index0 < (int) ((slots)); index0++) {
 			if ((new ItemStack(ItemTimeModifier.block, (int) (1)).getItem() == (new Object() {
 				public ItemStack getItemStack(int sltid) {

@@ -22,6 +22,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.gui.GuiButton;
 
+import net.icanthink.spacemod.procedure.ProcedureSwitchRealityOnPress;
 import net.icanthink.spacemod.procedure.ProcedureResistTheForce;
 import net.icanthink.spacemod.procedure.ProcedureForceProjection;
 import net.icanthink.spacemod.SpaceMod;
@@ -152,6 +153,7 @@ public class GuiForceGhostGui extends ElementsSpaceMod.ModElement {
 			this.buttonList.clear();
 			this.buttonList.add(new GuiButton(0, this.guiLeft + 2, this.guiTop + 2, 180, 20, "Become Force Projection"));
 			this.buttonList.add(new GuiButton(1, this.guiLeft + 2, this.guiTop + 20, 180, 20, "Resist The Force"));
+			this.buttonList.add(new GuiButton(2, this.guiLeft + 2, this.guiTop + 38, 180, 20, "Switch Realities"));
 		}
 
 		@Override
@@ -279,6 +281,14 @@ public class GuiForceGhostGui extends ElementsSpaceMod.ModElement {
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
 				ProcedureResistTheForce.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 2) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				ProcedureSwitchRealityOnPress.executeProcedure($_dependencies);
 			}
 		}
 	}

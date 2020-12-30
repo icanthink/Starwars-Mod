@@ -26,6 +26,7 @@ import net.minecraft.client.gui.GuiButton;
 
 import net.icanthink.spacemod.procedure.ProcedureUseAbility;
 import net.icanthink.spacemod.procedure.ProcedureRefillForceGui;
+import net.icanthink.spacemod.procedure.ProcedureDuplicateLastButtonPressed;
 import net.icanthink.spacemod.SpaceMod;
 import net.icanthink.spacemod.ElementsSpaceMod;
 
@@ -420,6 +421,7 @@ public class GuiForceAbilitiesUpgrade extends ElementsSpaceMod.ModElement {
 			Keyboard.enableRepeatEvents(true);
 			this.buttonList.clear();
 			this.buttonList.add(new GuiButton(0, this.guiLeft + 110, this.guiTop + 36, 30, 20, "Go!"));
+			this.buttonList.add(new GuiButton(1, this.guiLeft + 92, this.guiTop + 57, 70, 20, "Copy Last"));
 		}
 
 		@Override
@@ -538,7 +540,15 @@ public class GuiForceAbilitiesUpgrade extends ElementsSpaceMod.ModElement {
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
 				ProcedureUseAbility.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 1) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
+				ProcedureDuplicateLastButtonPressed.executeProcedure($_dependencies);
 			}
 		}
 	}

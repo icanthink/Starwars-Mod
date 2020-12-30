@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "spacemod:forcedimension_portal_ew"
+    },
+    "axis=x": {
+      "model": "spacemod:forcedimension_portal_ns"
+    },
+    "inventory": {
+      "model": "spacemod:forcedimension_portal_ns"
+    }
+  }
+}

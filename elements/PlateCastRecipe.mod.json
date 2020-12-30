@@ -9,37 +9,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "CUSTOM:PlateCast"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "Blocks.STONE"
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "Blocks.STONE"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:GoldPlate"
+      "value": "CUSTOM:PlateCast"
     },
-    "name": "goldplaterecipe",
+    "name": "platecastrecipe",
     "namespace": "mod"
   }
 }

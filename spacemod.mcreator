@@ -1,8 +1,8 @@
 {
   "id_map": {
-    "DIMENSION": 3,
-    "GUI": 9,
-    "ENTITY": 2
+    "ENTITY": 2,
+    "DIMENSION": 4,
+    "GUI": 9
   },
   "mod_elements": [
     {
@@ -1386,6 +1386,120 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "PlateCast",
+      "type": "item",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlateCastRecipe",
+      "type": "recipe",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ForceEnchanterGo",
+      "type": "procedure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ForceDimension",
+      "type": "dimension",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "1": 4
+      }
+    },
+    {
+      "name": "ForceDimensionPlayerEntersDimension",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ForceDimensionPlayerLeavesDimension",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DuplicateLastButtonPressed",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SwitchRealityOnPress",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1430,8 +1544,8 @@
   "language_map": {
     "en_us": {
       "advancements.forceachivement3.descr": "“For my ally is the Force, and a powerful ally it is.” – Yoda",
-      "item.timemodifier.name": "Time Modifier",
       "item.forceinfusediron.name": "Force Infused Iron",
+      "item.timemodifier.name": "Time Modifier",
       "itemGroup.tabforcetab": "Force Tab",
       "fluid.liquidmidichlorians": "LiquidMidichlorians",
       "item.midichlorianinjectioninjection.name": "Midichlorianinjection Injection",
@@ -1439,9 +1553,10 @@
       "advancements.forceachivement7.descr": "“Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well, you should not. For my ally is the Force, and a powerful ally it is\" -Yoda",
       "item.stoneofpermanence.name": "Stone Of Permanence",
       "effect.midichlorians": "Midichlorians",
+      "item.platecast.name": "Plate Cast",
       "tile.unstabletemplestone.name": "Temple Stone",
-      "tile.forceexplosives.name": "Force Explosives",
       "advancements.forceachivement7.title": "Insensitive to the Physical World",
+      "tile.forceexplosives.name": "Force Explosives",
       "tile.stoneofdeathandlife.name": "Stone Of Life And Death",
       "tile.templestone.name": "Temple Stone",
       "item.diamondplate.name": "Diamond Plate",
@@ -1476,6 +1591,7 @@
       "item.stoneofdeath.name": "Stone Of Death",
       "item.stoneoftime.name": "Stone Of Time",
       "item.positivemodifier.name": "Positive Modifier",
+      "item.forcedimension.name": "Force Dimension Portal Igniter",
       "advancements.forceachievement5.descr": "“Now I know there is something strong than fear — far stronger. The Force.” – Kanan Jarrus",
       "advancements.forceachivement2.title": "Force User",
       "item.permanentmidichlorianinjection.name": "Permanent Midichlorian Injection",

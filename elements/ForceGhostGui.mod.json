@@ -34,6 +34,20 @@
           "x": 246,
           "y": 114
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Switch Realities",
+          "onClick": {
+            "name": "SwitchRealityOnPress"
+          },
+          "width": 360,
+          "height": 40,
+          "name": "Switch Realities",
+          "x": 246,
+          "y": 150
+        }
       }
     ]
   }
