@@ -133,7 +133,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 								return 0;
 							}
 						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
-						forcePowerRequired = (double) (((forcePowerRequired) * 1) * new Object() {
+						forcePowerRequired = (double) ((forcePowerRequired) + (1 * new Object() {
 							int convert(String s) {
 								try {
 									return Integer.parseInt(s.trim());
@@ -141,7 +141,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 								}
 								return 0;
 							}
-						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 					}
 					if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("s"))) {
 						if (entity instanceof EntityLivingBase)
@@ -154,7 +154,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 									return 0;
 								}
 							}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))), (false), (false)));
-						forcePowerRequired = (double) (((forcePowerRequired) * 2) * new Object() {
+						forcePowerRequired = (double) ((forcePowerRequired) + (2 * new Object() {
 							int convert(String s) {
 								try {
 									return Integer.parseInt(s.trim());
@@ -162,7 +162,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 								}
 								return 0;
 							}
-						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 					}
 					if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("d"))) {
 						if (entity instanceof EntityLivingBase)
@@ -186,7 +186,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))) > 3)) {
 							entity.attackEntityFrom(DamageSource.MAGIC, (float) 4);
 						}
-						forcePowerRequired = (double) (((forcePowerRequired) * 3) * new Object() {
+						forcePowerRequired = (double) ((forcePowerRequired) + (3 * new Object() {
 							int convert(String s) {
 								try {
 									return Integer.parseInt(s.trim());
@@ -194,7 +194,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 								}
 								return 0;
 							}
-						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 					}
 					if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("j"))) {
 						if (entity instanceof EntityLivingBase)
@@ -207,7 +207,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 									return 0;
 								}
 							}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))), (false), (false)));
-						forcePowerRequired = (double) (((forcePowerRequired) * 3) * new Object() {
+						forcePowerRequired = (double) ((forcePowerRequired) + (3 * new Object() {
 							int convert(String s) {
 								try {
 									return Integer.parseInt(s.trim());
@@ -215,7 +215,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 								}
 								return 0;
 							}
-						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 					}
 				}
 			}
@@ -247,7 +247,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 									}
 								}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))) * 4), true);
 					}
-					forcePowerRequired = (double) (((forcePowerRequired) * 1) * new Object() {
+					forcePowerRequired = (double) ((forcePowerRequired) + (1 * new Object() {
 						int convert(String s) {
 							try {
 								return Integer.parseInt(s.trim());
@@ -255,7 +255,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 							}
 							return 0;
 						}
-					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
+					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 				}
 				if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("l"))) {
 					for (int index1 = 0; index1 < (int) (new Object() {
@@ -282,7 +282,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 										.getBlockPos().getZ()),
 								false));
 					}
-					forcePowerRequired = (double) (((forcePowerRequired) * 1) * new Object() {
+					forcePowerRequired = (double) ((forcePowerRequired) + (1 * new Object() {
 						int convert(String s) {
 							try {
 								return Integer.parseInt(s.trim());
@@ -290,7 +290,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 							}
 							return 0;
 						}
-					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))));
+					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 				}
 			}
 			indexCounter = (double) ((indexCounter) + 1);

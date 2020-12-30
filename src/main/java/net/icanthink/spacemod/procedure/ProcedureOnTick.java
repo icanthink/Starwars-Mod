@@ -29,10 +29,9 @@ public class ProcedureOnTick extends ElementsSpaceMod.ModElement {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		World world = (World) dependencies.get("world");
-		if (((0 < ((SpaceModVariables.forcePower) + ((SpaceModVariables.MapVariables.get(world).ForceStrength) + 1)))
-				&& ((SpaceModVariables.forcePower) < 100))) {
+		if (((SpaceModVariables.forcePower) < 100)) {
 			SpaceModVariables.forcePower = (double) ((SpaceModVariables.forcePower)
-					+ ((SpaceModVariables.MapVariables.get(world).ForceStrength) + 1));
+					+ (Math.round((((SpaceModVariables.MapVariables.get(world).ForceStrength) + 40) / 4)) / 10));
 		}
 		if ((0 > (SpaceModVariables.forcePower))) {
 			entity.attackEntityFrom(DamageSource.MAGIC, (float) 999);
