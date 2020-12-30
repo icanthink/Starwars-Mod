@@ -3,7 +3,7 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "K",
-    "keyBindingName": "Save Slot 1 Keybind",
+    "keyBindingName": "Save Slot 2 Keybind",
     "onKeyPressed": {
       "name": "SaveSlot2KeybindOnKeyPressed"
     }

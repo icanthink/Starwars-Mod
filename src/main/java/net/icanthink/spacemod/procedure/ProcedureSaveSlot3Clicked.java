@@ -28,5 +28,6 @@ public class ProcedureSaveSlot3Clicked extends ElementsSpaceMod.ModElement {
 				return "";
 			}
 		}.getText());
+		System.out.println("Save Slot 3 Saved");
 	}
 }

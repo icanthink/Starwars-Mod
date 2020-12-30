@@ -17,6 +17,7 @@ public class SpaceModVariables {
 	public static String ForceSlot3 = "";
 	public static double ForceAbilitySelected = 0;
 	public static double ForceConnectionInDeath = 4;
+	public static double forcePower = 100;
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "spacemod_mapvars";
 		public double ForceStrength = 0;

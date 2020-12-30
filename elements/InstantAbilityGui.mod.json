@@ -58,6 +58,9 @@
         "type": "button",
         "data": {
           "text": "Save Slot 2",
+          "onClick": {
+            "name": "SaveSlot2Clicked"
+          },
           "width": 120,
           "height": 40,
           "name": "Save Slot 2",
@@ -69,6 +72,9 @@
         "type": "button",
         "data": {
           "text": "Save Slot 3",
+          "onClick": {
+            "name": "SaveSlot3Clicked"
+          },
           "width": 120,
           "height": 40,
           "name": "Save Slot 3",

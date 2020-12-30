@@ -3,7 +3,7 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "L",
-    "keyBindingName": "Save Slot 1 Keybind",
+    "keyBindingName": "Save Slot 3 Keybind",
     "onKeyPressed": {
       "name": "SaveSlot3KeybindOnKeyPressed"
     }

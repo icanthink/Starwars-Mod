@@ -1496,6 +1496,34 @@
           }
         ]
       }
+    },
+    {
+      "name": "OnTick",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ForcePowerOverlay",
+      "type": "overlay",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [
@@ -1534,6 +1562,12 @@
       "type": "number",
       "scope": "global",
       "value": "4"
+    },
+    {
+      "name": "forcePower",
+      "type": "number",
+      "scope": "global",
+      "value": "100"
     }
   ],
   "sound_elements": [],
@@ -1563,9 +1597,9 @@
       "splash_potion.effect.midichlorians": "Splash Boosted Midichlorians",
       "advancements.forceachivement3.title": "Force Adept",
       "advancements.forceachivement6.title": "Connected to the Force",
-      "key.mcreator.saveslot2keybind": "Save Slot 1 Keybind",
+      "key.mcreator.saveslot2keybind": "Save Slot 2 Keybind",
       "item.playertarget.name": "Player Target",
-      "key.mcreator.saveslot3keybind": "Save Slot 1 Keybind",
+      "key.mcreator.saveslot3keybind": "Save Slot 3 Keybind",
       "item.stoneofinfinity.name": "Stone Of Infinity",
       "key.mcreator.saveslot1keybind": "Save Slot 1 Keybind",
       "advancements.forceachivement8.title": "The Strongest Jedi",

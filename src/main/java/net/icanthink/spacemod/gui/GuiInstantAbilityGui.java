@@ -23,6 +23,8 @@ import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.client.gui.GuiButton;
 
+import net.icanthink.spacemod.procedure.ProcedureSaveSlot3Clicked;
+import net.icanthink.spacemod.procedure.ProcedureSaveSlot2Clicked;
 import net.icanthink.spacemod.procedure.ProcedureSaveSlot1Clicked;
 import net.icanthink.spacemod.SpaceMod;
 import net.icanthink.spacemod.ElementsSpaceMod;
@@ -305,6 +307,20 @@ public class GuiInstantAbilityGui extends ElementsSpaceMod.ModElement {
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 				$_dependencies.put("guistate", guistate);
 				ProcedureSaveSlot1Clicked.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 1) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("guistate", guistate);
+				ProcedureSaveSlot2Clicked.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 2) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("guistate", guistate);
+				ProcedureSaveSlot3Clicked.executeProcedure($_dependencies);
 			}
 		}
 	}
