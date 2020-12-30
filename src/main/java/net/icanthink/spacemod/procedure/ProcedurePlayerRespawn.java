@@ -58,6 +58,10 @@ public class ProcedurePlayerRespawn extends ElementsSpaceMod.ModElement {
 			((EntityPlayer) entity).sendPlayerAbilities();
 		}
 		SpaceModVariables.ForceConnectionInDeath = (double) 4;
+		if (entity instanceof EntityPlayer) {
+			((EntityPlayer) entity).capabilities.allowFlying = (false);
+			((EntityPlayer) entity).sendPlayerAbilities();
+		}
 		if ((((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
 				? ((EntityPlayerMP) entity).getAdvancements()
 						.getProgress(

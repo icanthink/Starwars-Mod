@@ -3,10 +3,8 @@ package net.icanthink.spacemod.procedure;
 import net.minecraftforge.common.DimensionManager;
 
 import net.minecraft.world.WorldServer;
-import net.minecraft.world.World;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.GameType;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.Entity;
@@ -25,18 +23,14 @@ public class ProcedureSwitchRealityOnPress extends ElementsSpaceMod.ModElement {
 			System.err.println("Failed to load dependency entity for procedure SwitchRealityOnPress!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure SwitchRealityOnPress!");
-			return;
-		}
 		Entity entity = (Entity) dependencies.get("entity");
-		World world = (World) dependencies.get("world");
 		double lastZ = 0;
 		double lastX = 0;
 		double index = 0;
+		double lastY = 0;
 		lastX = (double) (entity.posX);
 		lastZ = (double) (entity.posZ);
-		index = (double) 255;
+		lastY = (double) (entity.posY);
 		if (((entity.dimension) == 6)) {
 			if (!entity.world.isRemote && !entity.isRiding() && !entity.isBeingRidden() && entity instanceof EntityPlayerMP) {
 				int dimensionID = 0;
@@ -71,15 +65,7 @@ public class ProcedureSwitchRealityOnPress extends ElementsSpaceMod.ModElement {
 				((EntityPlayer) entity).capabilities.allowFlying = (false);
 				((EntityPlayer) entity).sendPlayerAbilities();
 			}
-			for (int index0 = 0; index0 < (int) (255); index0++) {
-				if ((world.isAirBlock(new BlockPos((int) (lastX), (int) (index), (int) (lastZ))))) {
-					index = (double) ((index) - 1);
-				} else {
-					break;
-				}
-			}
-			entity.setPositionAndUpdate((lastX), (index), (lastZ));
-			System.out.println((index));
+			entity.setPositionAndUpdate((lastX), (lastY), (lastZ));
 		} else {
 			if (!entity.world.isRemote && !entity.isRiding() && !entity.isBeingRidden() && entity instanceof EntityPlayerMP) {
 				int dimensionID = WorldForceDimension.DIMID;
@@ -114,15 +100,7 @@ public class ProcedureSwitchRealityOnPress extends ElementsSpaceMod.ModElement {
 				((EntityPlayer) entity).capabilities.allowFlying = (true);
 				((EntityPlayer) entity).sendPlayerAbilities();
 			}
-			for (int index1 = 0; index1 < (int) (255); index1++) {
-				if ((world.isAirBlock(new BlockPos((int) (lastX), (int) (index), (int) (lastZ))))) {
-					index = (double) ((index) - 1);
-				} else {
-					break;
-				}
-			}
-			entity.setPositionAndUpdate((lastX), (index), (lastZ));
-			System.out.println((index));
+			entity.setPositionAndUpdate((lastX), 255, (lastZ));
 		}
 	}
 }

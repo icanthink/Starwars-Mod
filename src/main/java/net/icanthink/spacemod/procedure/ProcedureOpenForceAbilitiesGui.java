@@ -152,15 +152,23 @@ public class ProcedureOpenForceAbilitiesGui extends ElementsSpaceMod.ModElement 
 				}
 			}
 		} else {
-			if ((entity.getEntityData().getBoolean("forceProject"))) {
-				if (entity instanceof EntityPlayer)
-					((EntityPlayer) entity).setGameType(GameType.SPECTATOR);
-				entity.getEntityData().setBoolean("forceProject", (false));
+			if (((entity.dimension) == 6)) {
+				{
+					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+					$_dependencies.put("entity", entity);
+					ProcedureSwitchRealityOnPress.executeProcedure($_dependencies);
+				}
 			} else {
-				if (entity instanceof EntityPlayer)
-					((EntityPlayer) entity).setGameType(GameType.SPECTATOR);
-				if (entity instanceof EntityPlayer)
-					((EntityPlayer) entity).openGui(SpaceMod.instance, GuiForceGhostGui.GUIID, world, x, y, z);
+				if ((entity.getEntityData().getBoolean("forceProject"))) {
+					if (entity instanceof EntityPlayer)
+						((EntityPlayer) entity).setGameType(GameType.SPECTATOR);
+					entity.getEntityData().setBoolean("forceProject", (false));
+				} else {
+					if (entity instanceof EntityPlayer)
+						((EntityPlayer) entity).setGameType(GameType.SPECTATOR);
+					if (entity instanceof EntityPlayer)
+						((EntityPlayer) entity).openGui(SpaceMod.instance, GuiForceGhostGui.GUIID, world, x, y, z);
+				}
 			}
 		}
 	}

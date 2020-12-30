@@ -1,6 +1,6 @@
 advancements.forceachivement3.descr=“For my ally is the Force, and a powerful ally it is.” – Yoda
-item.forceinfusediron.name=Force Infused Iron
 item.timemodifier.name=Time Modifier
+item.forceinfusediron.name=Force Infused Iron
 itemGroup.tabforcetab=Force Tab
 fluid.liquidmidichlorians=LiquidMidichlorians
 item.midichlorianinjectioninjection.name=Midichlorianinjection Injection
@@ -10,8 +10,8 @@ item.stoneofpermanence.name=Stone Of Permanence
 effect.midichlorians=Midichlorians
 item.platecast.name=Plate Cast
 tile.unstabletemplestone.name=Temple Stone
-advancements.forceachivement7.title=Insensitive to the Physical World
 tile.forceexplosives.name=Force Explosives
+advancements.forceachivement7.title=Insensitive to the Physical World
 tile.stoneofdeathandlife.name=Stone Of Life And Death
 tile.templestone.name=Temple Stone
 item.diamondplate.name=Diamond Plate
