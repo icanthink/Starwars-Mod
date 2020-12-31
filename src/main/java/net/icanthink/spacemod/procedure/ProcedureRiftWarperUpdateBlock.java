@@ -93,6 +93,9 @@ public class ProcedureRiftWarperUpdateBlock extends ElementsSpaceMod.ModElement 
 								if (((riftOpeningSize) < (SpaceModVariables.MapVariables.get(world).RiftSize))) {
 									SpaceModVariables.WorldVariables.get(world).RiftMeltdown = (boolean) (true);
 									SpaceModVariables.WorldVariables.get(world).syncData(world);
+									SpaceModVariables.MapVariables
+											.get(world).RiftCounter = (double) ((SpaceModVariables.MapVariables.get(world).RiftSize) * 20);
+									SpaceModVariables.MapVariables.get(world).syncData(world);
 								}
 							}
 						}

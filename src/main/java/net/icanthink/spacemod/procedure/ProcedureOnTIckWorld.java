@@ -29,6 +29,7 @@ public class ProcedureOnTIckWorld extends ElementsSpaceMod.ModElement {
 		if ((SpaceModVariables.WorldVariables.get(world).RiftMeltdown)) {
 			SpaceModVariables.MapVariables.get(world).RiftCounter = (double) ((SpaceModVariables.MapVariables.get(world).RiftCounter) - 1);
 			SpaceModVariables.MapVariables.get(world).syncData(world);
+			System.out.println((SpaceModVariables.MapVariables.get(world).RiftCounter));
 		}
 	}
 

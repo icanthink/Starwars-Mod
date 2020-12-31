@@ -1754,7 +1754,7 @@
     {
       "name": "RiftMeltdown",
       "type": "logic",
-      "scope": "world",
+      "scope": "map",
       "value": "false"
     },
     {
