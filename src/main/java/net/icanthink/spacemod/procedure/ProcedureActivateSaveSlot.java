@@ -198,7 +198,7 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 					}
 					if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("j"))) {
 						if (entity instanceof EntityLivingBase)
-							((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, (int) 20, (int) new Object() {
+							((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, (int) (40 * new Object() {
 								int convert(String s) {
 									try {
 										return Integer.parseInt(s.trim());
@@ -206,8 +206,63 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 									}
 									return 0;
 								}
-							}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))), (false), (false)));
-						forcePowerRequired = (double) ((forcePowerRequired) + (3 * new Object() {
+							}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))),
+									(int) new Object() {
+										int convert(String s) {
+											try {
+												return Integer.parseInt(s.trim());
+											} catch (Exception e) {
+											}
+											return 0;
+										}
+									}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))), (false),
+									(false)));
+						forcePowerRequired = (double) ((forcePowerRequired) + (0.75 * new Object() {
+							int convert(String s) {
+								try {
+									return Integer.parseInt(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
+					}
+					if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("e"))) {
+						if (!world.isRemote) {
+							world.createExplosion(null, (int) (entity.posX), (int) (entity.posY), (int) (entity.posZ), (float) (new Object() {
+								int convert(String s) {
+									try {
+										return Integer.parseInt(s.trim());
+									} catch (Exception e) {
+									}
+									return 0;
+								}
+							}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))) * 4), true);
+						}
+						forcePowerRequired = (double) ((forcePowerRequired) + (4 * new Object() {
+							int convert(String s) {
+								try {
+									return Integer.parseInt(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
+					}
+					if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("l"))) {
+						for (int index1 = 0; index1 < (int) (new Object() {
+							int convert(String s) {
+								try {
+									return Integer.parseInt(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))); index1++) {
+							world.addWeatherEffect(
+									new EntityLightningBolt(world, (int) (entity.posX), (int) (entity.posY), (int) (entity.posZ), false));
+						}
+						forcePowerRequired = (double) ((forcePowerRequired) + (1 * new Object() {
 							int convert(String s) {
 								try {
 									return Integer.parseInt(s.trim());
@@ -218,87 +273,96 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 					}
 				}
-			}
-			if (((((ForceString).substring((int) (fullIndexCounter), (int) ((fullIndexCounter) + 1)))).equals("M"))) {
-				if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("e"))) {
-					if (!world.isRemote) {
-						world.createExplosion(null,
-								(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
-										entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
-												entity.getLook(1f).z * 100),
-										false, false, true).getBlockPos().getX()),
-								(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
-										entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
-												entity.getLook(1f).z * 100),
-										false, false, true).getBlockPos().getY()),
-								(int) (entity.world
-										.rayTraceBlocks(entity.getPositionEyes(1f),
-												entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
-														entity.getLook(1f).z * 100),
-												false, false, true)
-										.getBlockPos().getZ()),
-								(float) (new Object() {
-									int convert(String s) {
-										try {
-											return Integer.parseInt(s.trim());
-										} catch (Exception e) {
+				if (((((ForceString).substring((int) (fullIndexCounter), (int) ((fullIndexCounter) + 1)))).equals("M"))) {
+					if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("e"))) {
+						if (!world.isRemote) {
+							world.createExplosion(null,
+									(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
+											entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
+													entity.getLook(1f).z * 100),
+											false, false, true).getBlockPos().getX()),
+									(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
+											entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
+													entity.getLook(1f).z * 100),
+											false, false, true).getBlockPos().getY()),
+									(int) (entity.world
+											.rayTraceBlocks(entity.getPositionEyes(1f),
+													entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
+															entity.getLook(1f).z * 100),
+													false, false, true)
+											.getBlockPos().getZ()),
+									(float) (new Object() {
+										int convert(String s) {
+											try {
+												return Integer.parseInt(s.trim());
+											} catch (Exception e) {
+											}
+											return 0;
 										}
-										return 0;
-									}
-								}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))) * 4), true);
+									}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3)))) * 4), true);
+						}
+						forcePowerRequired = (double) ((forcePowerRequired) + (4 * new Object() {
+							int convert(String s) {
+								try {
+									return Integer.parseInt(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
+							}
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 					}
-					forcePowerRequired = (double) ((forcePowerRequired) + (1 * new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
+					if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("l"))) {
+						for (int index2 = 0; index2 < (int) (new Object() {
+							int convert(String s) {
+								try {
+									return Integer.parseInt(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
 							}
-							return 0;
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))); index2++) {
+							world.addWeatherEffect(
+									new EntityLightningBolt(world,
+											(int) (entity.world
+													.rayTraceBlocks(entity.getPositionEyes(1f),
+															entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100,
+																	entity.getLook(1f).y * 100, entity.getLook(1f).z * 100),
+															false, false, true)
+													.getBlockPos().getX()),
+											(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
+													entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
+															entity.getLook(1f).z * 100),
+													false, false, true).getBlockPos().getY()),
+											(int) (entity.world
+													.rayTraceBlocks(entity.getPositionEyes(1f),
+															entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100,
+																	entity.getLook(1f).y * 100, entity.getLook(1f).z * 100),
+															false, false, true)
+													.getBlockPos().getZ()),
+											false));
 						}
-					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
-				}
-				if (((((ForceString).substring((int) ((fullIndexCounter) + 1), (int) ((fullIndexCounter) + 2)))).equals("l"))) {
-					for (int index1 = 0; index1 < (int) (new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
+						forcePowerRequired = (double) ((forcePowerRequired) + (4 * new Object() {
+							int convert(String s) {
+								try {
+									return Integer.parseInt(s.trim());
+								} catch (Exception e) {
+								}
+								return 0;
 							}
-							return 0;
-						}
-					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))); index1++) {
-						world.addWeatherEffect(new EntityLightningBolt(world,
-								(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
-										entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
-												entity.getLook(1f).z * 100),
-										false, false, true).getBlockPos().getX()),
-								(int) (entity.world.rayTraceBlocks(entity.getPositionEyes(1f),
-										entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100, entity.getLook(1f).y * 100,
-												entity.getLook(1f).z * 100),
-										false, false, true).getBlockPos().getY()),
-								(int) (entity.world
-										.rayTraceBlocks(entity.getPositionEyes(1f), entity.getPositionEyes(1f).addVector(entity.getLook(1f).x * 100,
-												entity.getLook(1f).y * 100, entity.getLook(1f).z * 100), false, false, true)
-										.getBlockPos().getZ()),
-								false));
+						}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 					}
-					forcePowerRequired = (double) ((forcePowerRequired) + (1 * new Object() {
-						int convert(String s) {
-							try {
-								return Integer.parseInt(s.trim());
-							} catch (Exception e) {
-							}
-							return 0;
-						}
-					}.convert(((ForceString).substring((int) ((fullIndexCounter) + 2), (int) ((fullIndexCounter) + 3))))));
 				}
+				indexCounter = (double) ((indexCounter) + 1);
+				if ((2 < (indexCounter))) {
+					indexCounter = (double) 0;
+				}
+				fullIndexCounter = (double) ((fullIndexCounter) + 1);
 			}
-			indexCounter = (double) ((indexCounter) + 1);
-			if ((2 < (indexCounter))) {
-				indexCounter = (double) 0;
-			}
-			fullIndexCounter = (double) ((fullIndexCounter) + 1);
 		}
-		SpaceModVariables.forcePower = (double) ((SpaceModVariables.forcePower) - ((forcePowerRequired) * 10));
+		if ((((forcePowerRequired) - ((forcePower) / 2)) < 1)) {
+			SpaceModVariables.forcePower = (double) ((SpaceModVariables.forcePower) - 1);
+		} else {
+			SpaceModVariables.forcePower = (double) ((SpaceModVariables.forcePower) - (((forcePowerRequired) - ((forcePower) / 2)) * 10));
+		}
 	}
 }

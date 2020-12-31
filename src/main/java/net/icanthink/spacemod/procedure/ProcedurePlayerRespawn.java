@@ -62,6 +62,7 @@ public class ProcedurePlayerRespawn extends ElementsSpaceMod.ModElement {
 			((EntityPlayer) entity).capabilities.allowFlying = (false);
 			((EntityPlayer) entity).sendPlayerAbilities();
 		}
+		SpaceModVariables.forcePower = (double) 100;
 		if ((((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
 				? ((EntityPlayerMP) entity).getAdvancements()
 						.getProgress(

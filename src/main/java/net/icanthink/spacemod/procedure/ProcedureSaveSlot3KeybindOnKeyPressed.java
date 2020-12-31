@@ -30,6 +30,5 @@ public class ProcedureSaveSlot3KeybindOnKeyPressed extends ElementsSpaceMod.ModE
 			$_dependencies.put("world", world);
 			ProcedureActivateSaveSlot.executeProcedure($_dependencies);
 		}
-		System.out.println("Save Slot 3 keybind pressed");
 	}
 }

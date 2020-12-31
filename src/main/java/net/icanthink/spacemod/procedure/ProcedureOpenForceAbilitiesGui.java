@@ -13,6 +13,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.Entity;
 
+import net.icanthink.spacemod.world.WorldForceDimension;
 import net.icanthink.spacemod.potion.PotionMidichlorians;
 import net.icanthink.spacemod.item.ItemPowerModifier;
 import net.icanthink.spacemod.item.ItemPositiveModifier;
@@ -152,7 +153,7 @@ public class ProcedureOpenForceAbilitiesGui extends ElementsSpaceMod.ModElement 
 				}
 			}
 		} else {
-			if (((entity.dimension) == 6)) {
+			if (((entity.dimension) == (WorldForceDimension.DIMID))) {
 				{
 					java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 					$_dependencies.put("entity", entity);
@@ -163,6 +164,8 @@ public class ProcedureOpenForceAbilitiesGui extends ElementsSpaceMod.ModElement 
 					if (entity instanceof EntityPlayer)
 						((EntityPlayer) entity).setGameType(GameType.SPECTATOR);
 					entity.getEntityData().setBoolean("forceProject", (false));
+					if (entity instanceof EntityLivingBase)
+						((EntityLivingBase) entity).clearActivePotions();
 				} else {
 					if (entity instanceof EntityPlayer)
 						((EntityPlayer) entity).setGameType(GameType.SPECTATOR);

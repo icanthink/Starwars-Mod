@@ -31,7 +31,7 @@ public class ProcedureSwitchRealityOnPress extends ElementsSpaceMod.ModElement {
 		lastX = (double) (entity.posX);
 		lastZ = (double) (entity.posZ);
 		lastY = (double) (entity.posY);
-		if (((entity.dimension) == 6)) {
+		if (((entity.dimension) == (WorldForceDimension.DIMID))) {
 			if (!entity.world.isRemote && !entity.isRiding() && !entity.isBeingRidden() && entity instanceof EntityPlayerMP) {
 				int dimensionID = 0;
 				class TeleporterDirect extends Teleporter {
