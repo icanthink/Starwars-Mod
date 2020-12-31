@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "spacemod:blocks/riftwarpertop",
+    "up": "spacemod:blocks/riftwarpertop",
+    "north": "spacemod:blocks/riftwarperside",
+    "east": "spacemod:blocks/riftwarperside",
+    "south": "spacemod:blocks/riftwarperside",
+    "west": "spacemod:blocks/riftwarperside",
+    "particle": "spacemod:blocks/riftwarpertop"
+  }
+}

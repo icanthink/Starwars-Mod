@@ -1,7 +1,7 @@
 {
   "id_map": {
-    "ENTITY": 2,
     "GUI": 9,
+    "ENTITY": 2,
     "DIMENSION": 4
   },
   "mod_elements": [
@@ -1584,6 +1584,98 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "RiftWarper",
+      "type": "block",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RiftWarperUpdateBlock",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetRiftCommandExecuted",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetRift",
+      "type": "command",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RiftStabilityCoil",
+      "type": "block",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "OnTIckWorld",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1652,26 +1744,44 @@
       "type": "number",
       "scope": "map",
       "value": "0"
+    },
+    {
+      "name": "RiftSize",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "RiftMeltdown",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    },
+    {
+      "name": "RiftCounter",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
       "advancements.forceachivement3.descr": "“For my ally is the Force, and a powerful ally it is.” – Yoda",
-      "item.forceinfusediron.name": "Force Infused Iron",
       "item.timemodifier.name": "Time Modifier",
+      "item.forceinfusediron.name": "Force Infused Iron",
       "itemGroup.tabforcetab": "Force Tab",
       "fluid.liquidmidichlorians": "LiquidMidichlorians",
       "item.midichlorianinjectioninjection.name": "Midichlorian Injection",
       "item.negativemodifier.name": "Negative Modifier",
       "advancements.forceachivement7.descr": "“Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well, you should not. For my ally is the Force, and a powerful ally it is\" -Yoda",
       "item.stoneofpermanence.name": "Stone Of Permanence",
-      "effect.midichlorians": "Midichlorians",
       "item.stoneofdimensions.name": "Stone Of Dimensions",
+      "effect.midichlorians": "Midichlorians",
       "item.platecast.name": "Plate Cast",
       "tile.unstabletemplestone.name": "Temple Stone",
-      "advancements.forceachivement7.title": "Insensitive to the Physical World",
       "tile.forceexplosives.name": "Force Explosives",
+      "advancements.forceachivement7.title": "Insensitive to the Physical World",
       "tile.stoneofdeathandlife.name": "Stone Of Life And Death",
       "tile.templestone.name": "Temple Stone",
       "item.diamondplate.name": "Diamond Plate",
@@ -1683,6 +1793,7 @@
       "advancements.forceachivement3.title": "Force Adept",
       "advancements.forceachivement6.title": "Connected to the Force",
       "key.mcreator.saveslot2keybind": "Save Slot 2 Keybind",
+      "tile.riftstabilitycoil.name": "Rift Stability Coil",
       "item.playertarget.name": "Player Target",
       "key.mcreator.saveslot3keybind": "Save Slot 3 Keybind",
       "item.stoneofinfinity.name": "Stone Of Infinity",
@@ -1712,6 +1823,7 @@
       "item.permanentmidichlorianinjection.name": "Permanent Midichlorian Injection",
       "advancements.forceachievement1.title": "Force Sensitive",
       "key.mcreator.useforceabilities": "Use Force Abilities",
+      "tile.riftwarper.name": "Rift Warper",
       "item.goldplate.name": "Gold Plate",
       "advancements.forceachivement9.descr": "\"The dark side of the Force is a pathway to many abilities some consider to be unnatural.\" -Darth Sidious",
       "advancements.cheatingdeath.descr": "\"strike me down, I shall become more powerful than you can possibly imagine.\" -Obi-Wan Kenobi",

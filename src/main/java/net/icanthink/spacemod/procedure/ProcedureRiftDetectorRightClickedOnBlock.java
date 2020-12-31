@@ -48,11 +48,11 @@ public class ProcedureRiftDetectorRightClickedOnBlock extends ElementsSpaceMod.M
 			}
 		} else {
 			if (((SpaceModVariables.MapVariables.get(world).riftX) == 0)) {
-				SpaceModVariables.MapVariables.get(world).riftX = (double) ((Math.random() - 0.5) * 10000);
+				SpaceModVariables.MapVariables.get(world).riftX = (double) Math.round(((Math.random() - 0.5) * 1000));
 				SpaceModVariables.MapVariables.get(world).syncData(world);
 			}
 			if (((SpaceModVariables.MapVariables.get(world).riftY) == 0)) {
-				SpaceModVariables.MapVariables.get(world).riftY = (double) ((Math.random() - 0.5) * 10000);
+				SpaceModVariables.MapVariables.get(world).riftY = (double) Math.round(((Math.random() - 0.5) * 1000));
 				SpaceModVariables.MapVariables.get(world).syncData(world);
 			}
 			distance = (double) Math.sqrt((Math.pow(((SpaceModVariables.MapVariables.get(world).riftX) - (entity.posX)), 2)

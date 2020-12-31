@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "spacemod:blocks/riftstabilitycoiltop",
+    "up": "spacemod:blocks/riftstabilitycoiltop",
+    "north": "spacemod:blocks/riftstabilitycoilside",
+    "east": "spacemod:blocks/riftstabilitycoilside",
+    "south": "spacemod:blocks/riftstabilitycoilside",
+    "west": "spacemod:blocks/riftstabilitycoilside",
+    "particle": "spacemod:blocks/riftstabilitycoiltop"
+  }
+}

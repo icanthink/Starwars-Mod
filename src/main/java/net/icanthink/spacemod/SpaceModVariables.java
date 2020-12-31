@@ -25,6 +25,8 @@ public class SpaceModVariables {
 		public double ForceStrength = 0;
 		public double riftX = 0;
 		public double riftY = 0;
+		public double RiftSize = 0;
+		public double RiftCounter = 0;
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -38,6 +40,8 @@ public class SpaceModVariables {
 			ForceStrength = nbt.getDouble("ForceStrength");
 			riftX = nbt.getDouble("riftX");
 			riftY = nbt.getDouble("riftY");
+			RiftSize = nbt.getDouble("RiftSize");
+			RiftCounter = nbt.getDouble("RiftCounter");
 		}
 
 		@Override
@@ -45,6 +49,8 @@ public class SpaceModVariables {
 			nbt.setDouble("ForceStrength", ForceStrength);
 			nbt.setDouble("riftX", riftX);
 			nbt.setDouble("riftY", riftY);
+			nbt.setDouble("RiftSize", RiftSize);
+			nbt.setDouble("RiftCounter", RiftCounter);
 			return nbt;
 		}
 
@@ -69,6 +75,7 @@ public class SpaceModVariables {
 
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "spacemod_worldvars";
+		public boolean RiftMeltdown = false;
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -79,10 +86,12 @@ public class SpaceModVariables {
 
 		@Override
 		public void readFromNBT(NBTTagCompound nbt) {
+			RiftMeltdown = nbt.getBoolean("RiftMeltdown");
 		}
 
 		@Override
 		public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
+			nbt.setBoolean("RiftMeltdown", RiftMeltdown);
 			return nbt;
 		}
 
