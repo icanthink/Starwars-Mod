@@ -1,14 +1,14 @@
 advancements.forceachivement3.descr=“For my ally is the Force, and a powerful ally it is.” – Yoda
-item.timemodifier.name=Time Modifier
 item.forceinfusediron.name=Force Infused Iron
+item.timemodifier.name=Time Modifier
 itemGroup.tabforcetab=Force Tab
 fluid.liquidmidichlorians=LiquidMidichlorians
 item.midichlorianinjectioninjection.name=Midichlorian Injection
 item.negativemodifier.name=Negative Modifier
 advancements.forceachivement7.descr=“Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well, you should not. For my ally is the Force, and a powerful ally it is" -Yoda
 item.stoneofpermanence.name=Stone Of Permanence
-item.stoneofdimensions.name=Stone Of Dimensions
 effect.midichlorians=Midichlorians
+item.stoneofdimensions.name=Stone Of Dimensions
 item.platecast.name=Plate Cast
 tile.unstabletemplestone.name=Temple Stone
 tile.forceexplosives.name=Force Explosives
