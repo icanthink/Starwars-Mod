@@ -89,7 +89,7 @@ public class ProcedureOnTick extends ElementsSpaceMod.ModElement {
 		if (((SpaceModVariables.forcePower) > 100)) {
 			SpaceModVariables.forcePower = (double) 100;
 		}
-		if (((SpaceModVariables.WorldVariables.get(world).RiftMeltdown)
+		if (((SpaceModVariables.MapVariables.get(world).RiftMeltdown)
 				&& (Math.sqrt((Math.pow(((SpaceModVariables.MapVariables.get(world).riftX) - (entity.posX)), 2)
 						+ ((SpaceModVariables.MapVariables.get(world).riftY) - (entity.posZ)))) < (SpaceModVariables.MapVariables
 								.get(world).RiftSize)))) {
