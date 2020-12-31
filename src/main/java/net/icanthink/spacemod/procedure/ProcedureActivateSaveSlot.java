@@ -299,10 +299,6 @@ public class ProcedureActivateSaveSlot extends ElementsSpaceMod.ModElement {
 			}
 			fullIndexCounter = (double) ((fullIndexCounter) + 1);
 		}
-		System.out.println(((forcePowerRequired) * 10));
 		SpaceModVariables.forcePower = (double) ((SpaceModVariables.forcePower) - ((forcePowerRequired) * 10));
-		if (((forcePowerRequired) > (forcePower))) {
-			entity.attackEntityFrom(DamageSource.MAGIC, (float) ((forcePowerRequired) - (forcePower)));
-		}
 	}
 }

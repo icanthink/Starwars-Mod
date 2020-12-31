@@ -8,12 +8,12 @@
       {
         "type": "label",
         "data": {
-          "text": "<VAR:forcePower>",
+          "text": "<VAR:forcePowerString>",
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "name": "<VAR:forcePower>",
+          "name": "<VAR:forcePowerString>",
           "x": 12,
           "y": 6
         }

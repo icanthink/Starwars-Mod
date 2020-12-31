@@ -5,8 +5,11 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.common.MinecraftForge;
 
+import net.minecraft.world.WorldServer;
 import net.minecraft.world.World;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.entity.Entity;
 
 import net.icanthink.spacemod.SpaceModVariables;
@@ -29,10 +32,54 @@ public class ProcedureOnTick extends ElementsSpaceMod.ModElement {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		World world = (World) dependencies.get("world");
-		if (((SpaceModVariables.forcePower) < 100)) {
-			SpaceModVariables.forcePower = (double) ((SpaceModVariables.forcePower)
-					+ (Math.round((((SpaceModVariables.MapVariables.get(world).ForceStrength) + 40) / 4)) / 10));
+		SpaceModVariables.RechargeCounter = (double) ((SpaceModVariables.RechargeCounter) + 1);
+		if (((SpaceModVariables.RechargeCounter) > 20)) {
+			SpaceModVariables.RechargeCounter = (double) 0;
 		}
+		if ((((SpaceModVariables.RechargeCounter) > 10) && (((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
+				? ((EntityPlayerMP) entity).getAdvancements()
+						.getProgress(((WorldServer) entity.world).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("spacemod:forceachivement3")))
+						.isDone()
+				: false))) {
+			SpaceModVariables.RechargeCounter = (double) 0;
+		}
+		if ((((SpaceModVariables.RechargeCounter) > 5) && (((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
+				? ((EntityPlayerMP) entity).getAdvancements()
+						.getProgress(((WorldServer) entity.world).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("spacemod:forceachivement6")))
+						.isDone()
+				: false))) {
+			SpaceModVariables.RechargeCounter = (double) 0;
+		}
+		if ((((SpaceModVariables.RechargeCounter) > 3) && (((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
+				? ((EntityPlayerMP) entity).getAdvancements()
+						.getProgress(((WorldServer) entity.world).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("spacemod:forceachivement8")))
+						.isDone()
+				: false))) {
+			SpaceModVariables.RechargeCounter = (double) 0;
+		}
+		if ((((SpaceModVariables.RechargeCounter) > 2) && (((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
+				? ((EntityPlayerMP) entity).getAdvancements()
+						.getProgress(((WorldServer) entity.world).getAdvancementManager()
+								.getAdvancement(new ResourceLocation("spacemod:forceachivement9")))
+						.isDone()
+				: false))) {
+			SpaceModVariables.RechargeCounter = (double) 0;
+		}
+		if (((((SpaceModVariables.RechargeCounter) == 0)
+				|| (((entity instanceof EntityPlayerMP) && (entity.world instanceof WorldServer))
+						? ((EntityPlayerMP) entity).getAdvancements()
+								.getProgress(((WorldServer) entity.world).getAdvancementManager()
+										.getAdvancement(new ResourceLocation("spacemod:cheatingdeath")))
+								.isDone()
+						: false))
+				&& ((SpaceModVariables.forcePower) < 100))) {
+			SpaceModVariables.forcePower = (double) ((SpaceModVariables.forcePower)
+					+ (((SpaceModVariables.MapVariables.get(world).ForceStrength) + 40) / 40));
+		}
+		SpaceModVariables.forcePowerString = (String) (new java.text.DecimalFormat("##.##").format(Math.round((SpaceModVariables.forcePower))));
 		if ((0 > (SpaceModVariables.forcePower))) {
 			entity.attackEntityFrom(DamageSource.MAGIC, (float) 999);
 		}
