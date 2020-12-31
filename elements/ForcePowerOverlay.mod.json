@@ -3,14 +3,14 @@
   "_type": "overlay",
   "definition": {
     "priority": "NORMAL",
-    "conditionxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"condition_input\" deletable=\"false\" x=\"40\" y=\"40\"><value name=\"CONDITION\"><block type=\"logic_boolean\"><field name=\"BOOL\">TRUE</field></block></value></block><block type=\"entity_has_achievement\" x=\"511\" y=\"75\"><field name=\"achievement\">CUSTOM:ForceAchievement1</field></block></xml>",
+    "conditionxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"condition_input\" deletable=\"false\" x=\"40\" y=\"40\"><value name=\"CONDITION\"><block type=\"math_binary_ops\"><field name=\"OP\">NEQ</field><value name=\"A\"><block type=\"variables_get_number\"><field name=\"VAR\">global:forcePower</field></block></value><value name=\"B\"><block type=\"math_number\"><field name=\"NUM\">100</field></block></value></block></value></block></xml>",
     "components": [
       {
         "type": "label",
         "data": {
           "text": "<VAR:forcePowerString>",
           "color": {
-            "value": -1,
+            "value": -205,
             "falpha": 0.0
           },
           "name": "<VAR:forcePowerString>",

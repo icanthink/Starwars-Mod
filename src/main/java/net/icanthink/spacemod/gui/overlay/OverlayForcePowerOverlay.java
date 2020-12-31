@@ -39,8 +39,8 @@ public class OverlayForcePowerOverlay extends ElementsSpaceMod.ModElement {
 				int x = (int) entity.posX;
 				int y = (int) entity.posY;
 				int z = (int) entity.posZ;
-				if ((true)) {
-					Minecraft.getMinecraft().fontRenderer.drawString("" + (SpaceModVariables.forcePowerString) + "", posX + -9, posY + 81, -1);
+				if (((SpaceModVariables.forcePower) != 100)) {
+					Minecraft.getMinecraft().fontRenderer.drawString("" + (SpaceModVariables.forcePowerString) + "", posX + -9, posY + 81, -205);
 				}
 			}
 		}

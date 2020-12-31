@@ -23,6 +23,8 @@ public class SpaceModVariables {
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "spacemod_mapvars";
 		public double ForceStrength = 0;
+		public double riftX = 0;
+		public double riftY = 0;
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -34,11 +36,15 @@ public class SpaceModVariables {
 		@Override
 		public void readFromNBT(NBTTagCompound nbt) {
 			ForceStrength = nbt.getDouble("ForceStrength");
+			riftX = nbt.getDouble("riftX");
+			riftY = nbt.getDouble("riftY");
 		}
 
 		@Override
 		public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 			nbt.setDouble("ForceStrength", ForceStrength);
+			nbt.setDouble("riftX", riftX);
+			nbt.setDouble("riftY", riftY);
 			return nbt;
 		}
 

@@ -1,0 +1,30 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    " 45",
+    "6  "
+  ],
+  "key": {
+    "1": {
+      "item": "spacemod:forceinfusediron"
+    },
+    "2": {
+      "item": "spacemod:stoneofdimensions"
+    },
+    "4": {
+      "item": "spacemod:forceinfusediron"
+    },
+    "5": {
+      "item": "spacemod:forceinfusediron"
+    },
+    "6": {
+      "item": "spacemod:forceinfusediron"
+    }
+  },
+  "result": {
+    "item": "spacemod:riftdetector",
+    "count": 1
+  }
+}

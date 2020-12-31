@@ -1540,6 +1540,50 @@
           }
         ]
       }
+    },
+    {
+      "name": "RiftDetectorRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RiftDetector",
+      "type": "item",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RiftDetectorRecipe",
+      "type": "recipe",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoneOfDimensions",
+      "type": "item",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [
@@ -1596,6 +1640,18 @@
       "type": "number",
       "scope": "global",
       "value": "0"
+    },
+    {
+      "name": "riftX",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "riftY",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -1611,6 +1667,7 @@
       "advancements.forceachivement7.descr": "“Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well, you should not. For my ally is the Force, and a powerful ally it is\" -Yoda",
       "item.stoneofpermanence.name": "Stone Of Permanence",
       "effect.midichlorians": "Midichlorians",
+      "item.stoneofdimensions.name": "Stone Of Dimensions",
       "item.platecast.name": "Plate Cast",
       "tile.unstabletemplestone.name": "Temple Stone",
       "advancements.forceachivement7.title": "Insensitive to the Physical World",
@@ -1658,6 +1715,7 @@
       "item.goldplate.name": "Gold Plate",
       "advancements.forceachivement9.descr": "\"The dark side of the Force is a pathway to many abilities some consider to be unnatural.\" -Darth Sidious",
       "advancements.cheatingdeath.descr": "\"strike me down, I shall become more powerful than you can possibly imagine.\" -Obi-Wan Kenobi",
+      "item.riftdetector.name": "Rift Detector",
       "tile.lifeblock.name": "Life Block",
       "item.holocron.name": "Holocron",
       "item.powermodifier.name": "Power Modifier",
