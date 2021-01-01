@@ -455,7 +455,7 @@ public class ProcedureUseAbility extends ElementsSpaceMod.ModElement {
 				}
 			}
 		}
-		forceLevelRequired = (double) (((SpaceModVariables.MapVariables.get(world).ForceStrength) / 20) + (forceLevelRequired));
+		forceLevelRequired = (double) (((SpaceModVariables.WorldVariables.get(world).ForceStrength) / 20) + (forceLevelRequired));
 		if (((forceLevelRequired) > (forceLevel))) {
 			entity.attackEntityFrom(DamageSource.MAGIC, (float) (((forceLevelRequired) - (forceLevel)) * 10));
 		}

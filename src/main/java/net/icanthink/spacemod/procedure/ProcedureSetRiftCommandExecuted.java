@@ -27,9 +27,9 @@ public class ProcedureSetRiftCommandExecuted extends ElementsSpaceMod.ModElement
 		int x = (int) dependencies.get("x");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		SpaceModVariables.MapVariables.get(world).riftX = (double) x;
-		SpaceModVariables.MapVariables.get(world).syncData(world);
-		SpaceModVariables.MapVariables.get(world).riftY = (double) z;
-		SpaceModVariables.MapVariables.get(world).syncData(world);
+		SpaceModVariables.WorldVariables.get(world).riftX = (double) x;
+		SpaceModVariables.WorldVariables.get(world).syncData(world);
+		SpaceModVariables.WorldVariables.get(world).riftY = (double) z;
+		SpaceModVariables.WorldVariables.get(world).syncData(world);
 	}
 }

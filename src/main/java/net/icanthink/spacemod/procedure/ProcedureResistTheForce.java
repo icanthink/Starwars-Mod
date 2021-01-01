@@ -30,8 +30,8 @@ public class ProcedureResistTheForce extends ElementsSpaceMod.ModElement {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		World world = (World) dependencies.get("world");
-		SpaceModVariables.MapVariables.get(world).ForceStrength = (double) ((SpaceModVariables.MapVariables.get(world).ForceStrength) - 1);
-		SpaceModVariables.MapVariables.get(world).syncData(world);
+		SpaceModVariables.WorldVariables.get(world).ForceStrength = (double) ((SpaceModVariables.WorldVariables.get(world).ForceStrength) - 1);
+		SpaceModVariables.WorldVariables.get(world).syncData(world);
 		SpaceModVariables.ForceConnectionInDeath = (double) ((SpaceModVariables.ForceConnectionInDeath) - 0.5);
 		if (((SpaceModVariables.ForceConnectionInDeath) < 1)) {
 			if (!entity.world.isRemote && entity.world.getMinecraftServer() != null) {

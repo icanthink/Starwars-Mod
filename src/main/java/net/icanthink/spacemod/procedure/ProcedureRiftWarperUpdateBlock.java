@@ -39,7 +39,7 @@ public class ProcedureRiftWarperUpdateBlock extends ElementsSpaceMod.ModElement 
 		World world = (World) dependencies.get("world");
 		double riftOpeningSize = 0;
 		double index = 0;
-		if ((((SpaceModVariables.MapVariables.get(world).riftX) == x) && ((SpaceModVariables.MapVariables.get(world).riftY) == z))) {
+		if ((((SpaceModVariables.WorldVariables.get(world).riftX) == x) && ((SpaceModVariables.WorldVariables.get(world).riftY) == z))) {
 			if ((((world.getBlockState(new BlockPos((int) (x + 1), (int) y, (int) (z + 0)))).getBlock() == BlockStoneOfDeathAndLife.block
 					.getDefaultState().getBlock())
 					&& (((world.getBlockState(new BlockPos((int) (x + -1), (int) y, (int) (z + 0)))).getBlock() == BlockStoneOfDeathAndLife.block
@@ -76,12 +76,12 @@ public class ProcedureRiftWarperUpdateBlock extends ElementsSpaceMod.ModElement 
 									.getDefaultState().getBlock())) {
 								index = (double) y;
 								riftOpeningSize = (double) 0;
-								SpaceModVariables.MapVariables
-										.get(world).RiftSize = (double) ((SpaceModVariables.MapVariables.get(world).RiftSize) + 1);
-								SpaceModVariables.MapVariables.get(world).syncData(world);
-								SpaceModVariables.MapVariables
-										.get(world).ForceStrength = (double) ((SpaceModVariables.MapVariables.get(world).ForceStrength) + 1);
-								SpaceModVariables.MapVariables.get(world).syncData(world);
+								SpaceModVariables.WorldVariables
+										.get(world).RiftSize = (double) ((SpaceModVariables.WorldVariables.get(world).RiftSize) + 1);
+								SpaceModVariables.WorldVariables.get(world).syncData(world);
+								SpaceModVariables.WorldVariables
+										.get(world).ForceStrength = (double) ((SpaceModVariables.WorldVariables.get(world).ForceStrength) + 1);
+								SpaceModVariables.WorldVariables.get(world).syncData(world);
 								world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), Blocks.AIR.getDefaultState(), 3);
 								while (((index) > 0)) {
 									index = (double) ((index) - 1);
@@ -90,12 +90,12 @@ public class ProcedureRiftWarperUpdateBlock extends ElementsSpaceMod.ModElement 
 										riftOpeningSize = (double) ((riftOpeningSize) + 1);
 									}
 								}
-								if (((riftOpeningSize) < (SpaceModVariables.MapVariables.get(world).RiftSize))) {
-									SpaceModVariables.MapVariables.get(world).RiftMeltdown = (boolean) (true);
-									SpaceModVariables.MapVariables.get(world).syncData(world);
-									SpaceModVariables.MapVariables
-											.get(world).RiftCounter = (double) ((SpaceModVariables.MapVariables.get(world).RiftSize) * 20);
-									SpaceModVariables.MapVariables.get(world).syncData(world);
+								if (((riftOpeningSize) < (SpaceModVariables.WorldVariables.get(world).RiftSize))) {
+									SpaceModVariables.WorldVariables.get(world).RiftMeltdown = (boolean) (true);
+									SpaceModVariables.WorldVariables.get(world).syncData(world);
+									SpaceModVariables.WorldVariables
+											.get(world).RiftCounter = (double) ((SpaceModVariables.WorldVariables.get(world).RiftSize) * 20);
+									SpaceModVariables.WorldVariables.get(world).syncData(world);
 								}
 							}
 						}

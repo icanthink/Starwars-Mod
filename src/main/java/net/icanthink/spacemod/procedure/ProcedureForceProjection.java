@@ -33,6 +33,10 @@ public class ProcedureForceProjection extends ElementsSpaceMod.ModElement {
 			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, (int) 20000000, (int) 255, (false), (false)));
 		if (entity instanceof EntityLivingBase)
 			((EntityLivingBase) entity).addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, (int) 20000000, (int) 255, (false), (false)));
+		if (entity instanceof EntityPlayer) {
+			((EntityPlayer) entity).capabilities.disableDamage = (true);
+			((EntityPlayer) entity).sendPlayerAbilities();
+		}
 		if (entity instanceof EntityPlayer)
 			((EntityPlayer) entity).setGameType(GameType.ADVENTURE);
 		entity.getEntityData().setBoolean("forceProject", (true));

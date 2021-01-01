@@ -22,14 +22,14 @@ public class ProcedureOnTIckWorld extends ElementsSpaceMod.ModElement {
 			return;
 		}
 		World world = (World) dependencies.get("world");
-		if ((0 > (SpaceModVariables.MapVariables.get(world).RiftCounter))) {
-			SpaceModVariables.MapVariables.get(world).RiftMeltdown = (boolean) (false);
-			SpaceModVariables.MapVariables.get(world).syncData(world);
+		if ((0 > (SpaceModVariables.WorldVariables.get(world).RiftCounter))) {
+			SpaceModVariables.WorldVariables.get(world).RiftMeltdown = (boolean) (false);
+			SpaceModVariables.WorldVariables.get(world).syncData(world);
 		}
-		if ((SpaceModVariables.MapVariables.get(world).RiftMeltdown)) {
-			SpaceModVariables.MapVariables.get(world).RiftCounter = (double) ((SpaceModVariables.MapVariables.get(world).RiftCounter) - 1);
-			SpaceModVariables.MapVariables.get(world).syncData(world);
-			System.out.println((SpaceModVariables.MapVariables.get(world).RiftCounter));
+		if ((SpaceModVariables.WorldVariables.get(world).RiftMeltdown)) {
+			SpaceModVariables.WorldVariables.get(world).RiftCounter = (double) ((SpaceModVariables.WorldVariables.get(world).RiftCounter) - 1);
+			SpaceModVariables.WorldVariables.get(world).syncData(world);
+			System.out.println((SpaceModVariables.WorldVariables.get(world).RiftCounter));
 		}
 	}
 

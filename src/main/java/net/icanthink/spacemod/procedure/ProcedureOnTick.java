@@ -80,7 +80,7 @@ public class ProcedureOnTick extends ElementsSpaceMod.ModElement {
 						: false))
 				&& ((SpaceModVariables.forcePower) < 100))) {
 			SpaceModVariables.forcePower = (double) ((SpaceModVariables.forcePower)
-					+ (((SpaceModVariables.MapVariables.get(world).ForceStrength) + 40) / 40));
+					+ (((SpaceModVariables.WorldVariables.get(world).ForceStrength) + 40) / 40));
 		}
 		SpaceModVariables.forcePowerString = (String) (new java.text.DecimalFormat("##.##").format(Math.round((SpaceModVariables.forcePower))));
 		if ((0 > (SpaceModVariables.forcePower))) {
@@ -89,9 +89,9 @@ public class ProcedureOnTick extends ElementsSpaceMod.ModElement {
 		if (((SpaceModVariables.forcePower) > 100)) {
 			SpaceModVariables.forcePower = (double) 100;
 		}
-		if (((SpaceModVariables.MapVariables.get(world).RiftMeltdown)
-				&& (Math.sqrt((Math.pow(((SpaceModVariables.MapVariables.get(world).riftX) - (entity.posX)), 2)
-						+ ((SpaceModVariables.MapVariables.get(world).riftY) - (entity.posZ)))) < (SpaceModVariables.MapVariables
+		if (((SpaceModVariables.WorldVariables.get(world).RiftMeltdown)
+				&& (Math.sqrt((Math.pow(((SpaceModVariables.WorldVariables.get(world).riftX) - (entity.posX)), 2)
+						+ ((SpaceModVariables.WorldVariables.get(world).riftY) - (entity.posZ)))) < (SpaceModVariables.WorldVariables
 								.get(world).RiftSize)))) {
 			if (!entity.world.isRemote && !entity.isRiding() && !entity.isBeingRidden() && entity instanceof EntityPlayerMP) {
 				int dimensionID = WorldForceDimension.DIMID;

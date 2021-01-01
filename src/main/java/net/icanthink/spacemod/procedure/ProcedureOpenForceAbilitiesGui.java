@@ -164,6 +164,10 @@ public class ProcedureOpenForceAbilitiesGui extends ElementsSpaceMod.ModElement 
 					if (entity instanceof EntityPlayer)
 						((EntityPlayer) entity).setGameType(GameType.SPECTATOR);
 					entity.getEntityData().setBoolean("forceProject", (false));
+					if (entity instanceof EntityPlayer) {
+						((EntityPlayer) entity).capabilities.disableDamage = (false);
+						((EntityPlayer) entity).sendPlayerAbilities();
+					}
 					if (entity instanceof EntityLivingBase)
 						((EntityLivingBase) entity).clearActivePotions();
 				} else {

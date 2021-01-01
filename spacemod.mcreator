@@ -1706,7 +1706,7 @@
     {
       "name": "ForceStrength",
       "type": "number",
-      "scope": "map",
+      "scope": "world",
       "value": "0"
     },
     {
@@ -1736,31 +1736,31 @@
     {
       "name": "riftX",
       "type": "number",
-      "scope": "map",
+      "scope": "world",
       "value": "0"
     },
     {
       "name": "riftY",
       "type": "number",
-      "scope": "map",
+      "scope": "world",
       "value": "0"
     },
     {
       "name": "RiftSize",
       "type": "number",
-      "scope": "map",
+      "scope": "world",
       "value": "0"
     },
     {
       "name": "RiftMeltdown",
       "type": "logic",
-      "scope": "map",
+      "scope": "world",
       "value": "false"
     },
     {
       "name": "RiftCounter",
       "type": "number",
-      "scope": "map",
+      "scope": "world",
       "value": "0"
     }
   ],
