@@ -22,9 +22,6 @@
     "hasGlow": false,
     "onRightClickedInAir": {
       "name": "RiftDetectorRightClickedOnBlock"
-    },
-    "onRightClickedOnBlock": {
-      "name": "RiftDetectorRightClickedOnBlock"
     }
   }
 }
