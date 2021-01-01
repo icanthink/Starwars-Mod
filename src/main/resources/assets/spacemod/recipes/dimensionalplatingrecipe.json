@@ -1,0 +1,42 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "spacemod:dimensionalfabric"
+    },
+    "1": {
+      "item": "spacemod:diamondplate"
+    },
+    "2": {
+      "item": "spacemod:dimensionalfabric"
+    },
+    "3": {
+      "item": "spacemod:dimensionalfabric"
+    },
+    "4": {
+      "item": "spacemod:diamondplate"
+    },
+    "5": {
+      "item": "spacemod:dimensionalfabric"
+    },
+    "6": {
+      "item": "spacemod:dimensionalfabric"
+    },
+    "7": {
+      "item": "spacemod:diamondplate"
+    },
+    "8": {
+      "item": "spacemod:dimensionalfabric"
+    }
+  },
+  "result": {
+    "item": "spacemod:dimensionalplating",
+    "count": 1
+  }
+}

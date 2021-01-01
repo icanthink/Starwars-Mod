@@ -7,25 +7,20 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 
-import net.minecraft.world.World;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.ActionResult;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.block.state.IBlockState;
 
-import net.icanthink.spacemod.procedure.ProcedureStoneOfDimensionsRightClickedInAir;
 import net.icanthink.spacemod.creativetab.TabForceTab;
 import net.icanthink.spacemod.ElementsSpaceMod;
 
 @ElementsSpaceMod.ModElement.Tag
-public class ItemStoneOfDimensions extends ElementsSpaceMod.ModElement {
-	@GameRegistry.ObjectHolder("spacemod:stoneofdimensions")
+public class ItemStoneOfTheForce extends ElementsSpaceMod.ModElement {
+	@GameRegistry.ObjectHolder("spacemod:stoneoftheforce")
 	public static final Item block = null;
-	public ItemStoneOfDimensions(ElementsSpaceMod instance) {
-		super(instance, 116);
+	public ItemStoneOfTheForce(ElementsSpaceMod instance) {
+		super(instance, 132);
 	}
 
 	@Override
@@ -36,14 +31,14 @@ public class ItemStoneOfDimensions extends ElementsSpaceMod.ModElement {
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
-		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("spacemod:stoneofdimensions", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("spacemod:stoneoftheforce", "inventory"));
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			setMaxDamage(0);
 			maxStackSize = 64;
-			setUnlocalizedName("stoneofdimensions");
-			setRegistryName("stoneofdimensions");
+			setUnlocalizedName("stoneoftheforce");
+			setRegistryName("stoneoftheforce");
 			setCreativeTab(TabForceTab.tab);
 		}
 
@@ -66,21 +61,6 @@ public class ItemStoneOfDimensions extends ElementsSpaceMod.ModElement {
 		@SideOnly(Side.CLIENT)
 		public boolean hasEffect(ItemStack itemstack) {
 			return true;
-		}
-
-		@Override
-		public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer entity, EnumHand hand) {
-			ActionResult<ItemStack> ar = super.onItemRightClick(world, entity, hand);
-			ItemStack itemstack = ar.getResult();
-			int x = (int) entity.posX;
-			int y = (int) entity.posY;
-			int z = (int) entity.posZ;
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				ProcedureStoneOfDimensionsRightClickedInAir.executeProcedure($_dependencies);
-			}
-			return ar;
 		}
 	}
 }

@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "blankforcestone",
+    "texture": "stoneoftheforce",
     "customModelName": "Normal",
-    "name": "Stone Of Dimensions",
+    "name": "Stone Of The Force",
     "creativeTab": {
       "value": "CUSTOM:ForceTab"
     },
@@ -19,9 +19,6 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [],
-    "hasGlow": true,
-    "onRightClickedInAir": {
-      "name": "StoneOfDimensionsRightClickedInAir"
-    }
+    "hasGlow": true
   }
 }

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "spacemod:blocks/dimensionalplating",
+    "up": "spacemod:blocks/dimensionalplating",
+    "north": "spacemod:blocks/dimensionalplating",
+    "east": "spacemod:blocks/dimensionalplating",
+    "south": "spacemod:blocks/dimensionalplating",
+    "west": "spacemod:blocks/dimensionalplating",
+    "particle": "spacemod:blocks/dimensionalplating"
+  }
+}

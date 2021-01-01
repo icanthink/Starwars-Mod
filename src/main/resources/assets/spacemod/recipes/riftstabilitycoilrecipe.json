@@ -1,0 +1,42 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "spacemod:dimensionalplating"
+    },
+    "1": {
+      "item": "spacemod:dimensionalconduit"
+    },
+    "2": {
+      "item": "spacemod:dimensionalplating"
+    },
+    "3": {
+      "item": "spacemod:dimensionalplating"
+    },
+    "4": {
+      "item": "spacemod:dimensionalconduit"
+    },
+    "5": {
+      "item": "spacemod:dimensionalplating"
+    },
+    "6": {
+      "item": "spacemod:dimensionalplating"
+    },
+    "7": {
+      "item": "spacemod:dimensionalconduit"
+    },
+    "8": {
+      "item": "spacemod:dimensionalplating"
+    }
+  },
+  "result": {
+    "item": "spacemod:riftstabilitycoil",
+    "count": 1
+  }
+}

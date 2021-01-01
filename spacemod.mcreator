@@ -1716,6 +1716,62 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "DimensionalPlating",
+      "type": "block",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DimensionalPlatingRecipe",
+      "type": "recipe",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RiftStabilityCoilRecipe",
+      "type": "recipe",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "RiftWarperRecipe",
+      "type": "recipe",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoneOfTheForce",
+      "type": "item",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "StoneOfDimensionsRightClickedInAir",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1814,6 +1870,7 @@
       "fluid.liquidmidichlorians": "LiquidMidichlorians",
       "item.midichlorianinjectioninjection.name": "Midichlorian Injection",
       "item.negativemodifier.name": "Negative Modifier",
+      "item.stoneoftheforce.name": "Stone Of The Force",
       "advancements.forceachivement7.descr": "“Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well, you should not. For my ally is the Force, and a powerful ally it is\" -Yoda",
       "item.stoneofpermanence.name": "Stone Of Permanence",
       "item.stoneofdimensions.name": "Stone Of Dimensions",
@@ -1849,6 +1906,7 @@
       "lingering_potion.effect.midichlorians": "Lingering Boosted Midichlorians",
       "item.blankforcestone.name": "Blank Force Stone",
       "advancements.forceachievement1.descr": "“Close your eyes. Feel it. The light…it’s always been there. It will guide you.” – Maz Kanata",
+      "tile.dimensionalplating.name": "Dimensional Plating",
       "advancements.forceachivement4.title": "One With the Force",
       "tile.why.name": "Why...",
       "advancements.forceachivement2.descr": "“Don’t underestimate the Force.” – Darth Vader",
