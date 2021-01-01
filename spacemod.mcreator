@@ -1676,6 +1676,14 @@
           }
         ]
       }
+    },
+    {
+      "name": "DimentionalReeds",
+      "type": "plant",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [
@@ -1785,6 +1793,7 @@
       "tile.stoneofdeathandlife.name": "Stone Of Life And Death",
       "tile.templestone.name": "Temple Stone",
       "item.diamondplate.name": "Diamond Plate",
+      "tile.dimentionalreeds.name": "Dimentional Reeds",
       "advancements.forceachivement9.title": "A Pathways to Unnatural Abilities",
       "advancements.forceachievement5.title": "Force Warrior",
       "advancements.cheatingdeath.title": "Cheating Death",
@@ -1851,6 +1860,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "1.12.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.icanthink.spacemod",
     "lockBaseModFiles": false
   },

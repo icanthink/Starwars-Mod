@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "rift_scanner_item_texture"
+      },
+      "name": "default"
+    }
+  }
+}
