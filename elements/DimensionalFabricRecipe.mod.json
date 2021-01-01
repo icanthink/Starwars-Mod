@@ -1,0 +1,45 @@
+{
+  "_fv": 6,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.PAPER"
+      },
+      {
+        "value": "Items.PAPER"
+      },
+      {
+        "value": "Items.PAPER"
+      },
+      {
+        "value": "CUSTOM:DimentionalReeds"
+      },
+      {
+        "value": "CUSTOM:DimentionalReeds"
+      },
+      {
+        "value": "CUSTOM:DimentionalReeds"
+      },
+      {
+        "value": "Items.PAPER"
+      },
+      {
+        "value": "Items.PAPER"
+      },
+      {
+        "value": "Items.PAPER"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:DimensionalFabric"
+    },
+    "name": "dimensionalfabricrecipe",
+    "namespace": "mod"
+  }
+}

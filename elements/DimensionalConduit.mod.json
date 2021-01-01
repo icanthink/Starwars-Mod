@@ -2,14 +2,14 @@
   "_fv": 6,
   "_type": "item",
   "definition": {
-    "renderType": 1,
-    "texture": "rift_scanner_item_texture",
-    "customModelName": "riftdetector:default",
-    "name": "Rift Detector",
+    "renderType": 0,
+    "texture": "dimensionalconduit",
+    "customModelName": "Normal",
+    "name": "Dimensional Conduit",
     "creativeTab": {
       "value": "CUSTOM:ForceTab"
     },
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -19,9 +19,6 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [],
-    "hasGlow": false,
-    "onRightClickedInAir": {
-      "name": "RiftDetectorRightClickedOnBlock"
-    }
+    "hasGlow": false
   }
 }

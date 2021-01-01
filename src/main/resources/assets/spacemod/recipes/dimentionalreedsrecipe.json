@@ -1,0 +1,30 @@
+{
+  "group": "spacemod",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "1": {
+      "item": "spacemod:stoneofdimensions"
+    },
+    "3": {
+      "item": "spacemod:stoneofdimensions"
+    },
+    "4": {
+      "item": "minecraft:reeds"
+    },
+    "5": {
+      "item": "spacemod:stoneofdimensions"
+    },
+    "7": {
+      "item": "spacemod:stoneofdimensions"
+    }
+  },
+  "result": {
+    "item": "spacemod:dimentionalreeds",
+    "count": 1
+  }
+}
