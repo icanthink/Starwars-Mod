@@ -1772,6 +1772,14 @@
           }
         ]
       }
+    },
+    {
+      "name": "DimensionalConduitRecipe",
+      "type": "recipe",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [
