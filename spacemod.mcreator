@@ -1,8 +1,8 @@
 {
   "id_map": {
-    "ENTITY": 2,
     "DIMENSION": 4,
-    "GUI": 9
+    "GUI": 9,
+    "ENTITY": 2
   },
   "mod_elements": [
     {
@@ -1780,6 +1780,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "BeskarStaff",
+      "type": "tool",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {}
     }
   ],
   "variable_elements": [
@@ -1884,6 +1892,7 @@
       "item.stoneofdimensions.name": "Stone Of Dimensions",
       "effect.midichlorians": "Midichlorians",
       "item.platecast.name": "Plate Cast",
+      "item.beskarstaff.name": "Blue Lightsaber Down",
       "tile.unstabletemplestone.name": "Temple Stone",
       "item.dimensionalconduit.name": "Dimensional Conduit",
       "tile.forceexplosives.name": "Force Explosives",
