@@ -2,20 +2,20 @@
   "_fv": 6,
   "_type": "tool",
   "definition": {
-    "renderType": 0,
-    "texture": "bluelightsabertmp",
-    "customModelName": "Normal",
-    "name": "Blue Lightsaber Down",
+    "renderType": 1,
+    "texture": "beskarstaff",
+    "customModelName": "riftdetector:default",
+    "name": "Lightsaber Down",
     "creativeTab": {
       "value": "CUSTOM:ForceTab"
     },
-    "toolType": "MultiTool",
+    "toolType": "Special",
     "harvestLevel": 1,
     "efficiency": 4.0,
     "attackSpeed": 1.0,
     "enchantability": 2,
     "damageVsEntity": 4.0,
-    "usageCount": 1000,
+    "usageCount": 100,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": []

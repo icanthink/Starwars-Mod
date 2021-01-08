@@ -1,4 +1,3 @@
-
 package net.icanthink.spacemod.item;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -40,29 +39,29 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 
 @ElementsSpaceMod.ModElement.Tag
-public class ItemBeskarStaff extends ElementsSpaceMod.ModElement {
-	@GameRegistry.ObjectHolder("spacemod:beskarstaff")
+public class ItemLightsaberDown extends ElementsSpaceMod.ModElement {
+	@GameRegistry.ObjectHolder("spacemod:lightsaberdown")
 	public static final Item block = null;
-	public ItemBeskarStaff(ElementsSpaceMod instance) {
-		super(instance, 136);
+	public ItemLightsaberDown(ElementsSpaceMod instance) {
+		super(instance, 138);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemToolCustom() {
-		}.setUnlocalizedName("beskarstaff").setRegistryName("beskarstaff").setCreativeTab(TabForceTab.tab));
+		}.setUnlocalizedName("lightsaberdown").setRegistryName("lightsaberdown").setCreativeTab(TabForceTab.tab));
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
-		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("spacemod:beskarstaff", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("spacemod:lightsaberdown", "inventory"));
 	}
 	private static class ItemToolCustom extends Item {
 		protected ItemToolCustom() {
-			setMaxDamage(1000);
+			setMaxDamage(100);
 			setMaxStackSize(1);
-            this.addPropertyOverride(new ResourceLocation("blocking"), new IItemPropertyGetter() {
+			this.addPropertyOverride(new ResourceLocation("blocking"), new IItemPropertyGetter() {
 
                 @SideOnly(Side.CLIENT)
                 public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn) {
@@ -75,31 +74,27 @@ public class ItemBeskarStaff extends ElementsSpaceMod.ModElement {
 		public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
 			Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
 			if (equipmentSlot == EntityEquipmentSlot.MAINHAND) {
-				multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 0f, 0));
+				multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Tool modifier", 20f, 0));
 				multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Tool modifier", -3, 0));
 			}
 			return multimap;
 		}
 
 		@Override
-		public boolean canHarvestBlock(IBlockState blockIn) {
-			return true;
-		}
-
-		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, IBlockState par2Block) {
-			return 4f;
-		}
-
-		@Override
-		public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
-			//stack.damageItem(1, attacker);
-			return true;
+			IBlockState require;
+			return 0;
 		}
 
 		@Override
 		public boolean onBlockDestroyed(ItemStack stack, World worldIn, IBlockState state, BlockPos pos, EntityLivingBase entityLiving) {
-			//stack.damageItem(1, entityLiving);
+			stack.damageItem(1, entityLiving);
+			return true;
+		}
+
+		@Override
+		public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
+			stack.damageItem(2, attacker);
 			return true;
 		}
 
@@ -112,7 +107,7 @@ public class ItemBeskarStaff extends ElementsSpaceMod.ModElement {
 		public int getItemEnchantability() {
 			return 2;
 		}
-
+		
 		@Override
         public int getMaxItemUseDuration(ItemStack par1ItemStack) {
             return 72000;

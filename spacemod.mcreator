@@ -1,8 +1,8 @@
 {
   "id_map": {
-    "DIMENSION": 4,
     "GUI": 9,
-    "ENTITY": 2
+    "ENTITY": 2,
+    "DIMENSION": 4
   },
   "mod_elements": [
     {
@@ -1782,9 +1782,9 @@
       "ids": {}
     },
     {
-      "name": "BeskarStaff",
+      "name": "LightsaberDown",
       "type": "tool",
-      "sortid": 137,
+      "sortid": 138,
       "compiles": true,
       "locked_code": true,
       "ids": {}
@@ -1880,8 +1880,8 @@
   "language_map": {
     "en_us": {
       "advancements.forceachivement3.descr": "“For my ally is the Force, and a powerful ally it is.” – Yoda",
-      "item.timemodifier.name": "Time Modifier",
       "item.forceinfusediron.name": "Force Infused Iron",
+      "item.timemodifier.name": "Time Modifier",
       "itemGroup.tabforcetab": "Force Tab",
       "fluid.liquidmidichlorians": "LiquidMidichlorians",
       "item.midichlorianinjectioninjection.name": "Midichlorian Injection",
@@ -1892,7 +1892,6 @@
       "item.stoneofdimensions.name": "Stone Of Dimensions",
       "effect.midichlorians": "Midichlorians",
       "item.platecast.name": "Plate Cast",
-      "item.beskarstaff.name": "Blue Lightsaber Down",
       "tile.unstabletemplestone.name": "Temple Stone",
       "item.dimensionalconduit.name": "Dimensional Conduit",
       "tile.forceexplosives.name": "Force Explosives",
@@ -1945,6 +1944,7 @@
       "advancements.forceachivement9.descr": "\"The dark side of the Force is a pathway to many abilities some consider to be unnatural.\" -Darth Sidious",
       "advancements.cheatingdeath.descr": "\"strike me down, I shall become more powerful than you can possibly imagine.\" -Obi-Wan Kenobi",
       "item.riftdetector.name": "Rift Detector",
+      "item.lightsaberdown.name": "Lightsaber Down",
       "item.dimensionalfabric.name": "Dimensional Fabric",
       "tile.lifeblock.name": "Life Block",
       "item.holocron.name": "Holocron",
